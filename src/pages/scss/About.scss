@@ -1,0 +1,20 @@
+.block {
+    width: 80%;
+    margin: 150px auto;
+
+
+    @media (max-width: 900px) {
+        width: 100%;
+        margin: 50px auto;
+    }
+
+} 
+.about{
+
+
+    .block1 {
+        @media (max-width: 700px){
+            margin-top: 30px;
+        }
+    }
+}

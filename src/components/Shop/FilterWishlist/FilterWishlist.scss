@@ -1,0 +1,20 @@
+.wishlist-filter{
+
+
+
+    select {
+        border: none;
+        width: 200px;
+        margin: 50px 0 50px 150px;
+
+        &:focus {
+            border-color: white;
+            box-shadow: none;
+            color: black
+        }
+    }
+
+
+
+
+}

@@ -1,0 +1,25 @@
+@import "~bootstrap/scss/bootstrap";
+
+@font-face {
+  font-family: 'TenorSans';
+  src: local('TenorSans'), url(./fonts/TenorSans-Regular.ttf) format('truetype');
+}
+
+
+
+body {
+  margin: 0;
+  padding: 0 50px;
+  font-family: -apple-system, BlinkMacSystemFont, 'TenorSans';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+    @media (max-width: 700px) {
+      padding: 0 5%;
+    }
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'TenorSans';
+}

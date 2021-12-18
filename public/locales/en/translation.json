@@ -1,0 +1,75 @@
+{
+  "logIn": "Login",
+  "logOut": "Log out",
+  "order": "Add to cart",
+  "ordered": "Ordered",
+  "back": "back to shop",
+  "backorder": "Back to orders",
+  "cart": "Cart is empty",
+  "confirmOrder": "Confirm order",
+  "changeDate": "Change date?",
+  "download": "Download",
+  "deliveryDate": "Delivery date",
+  "orderInHolland": "Order in Holland department",
+    "pages" : {
+      "aboutUs" : "About us",
+      "contacts" : "Contacts",
+      "shop" : "E-shop",
+      "orders" : "Orders"
+    },
+    "filters" : {
+      "color" : "Color",
+      "flowers" : "Category",
+      "search" : "SEARCH BY NAME, CATEGORY OR ID",
+      "show" : "Show"
+    },
+    "params" : {
+      "length" : "Length",
+      "amount" : "Available",
+      "quality" : "Quality",
+      "color" : "Color",
+      "price" : "Price",
+      "supplier" : "Supplier",
+      "totalAmount" : "Total amount",
+      "totalSumm" : "Sum",
+      "quantity" : "Quantity",
+      "name" : "Name"
+    },
+    "message" : {
+      "orderConfirmed" : "After order confirm all the further details will be sent to your e-mail. If you have any questions, please call",
+      "orderConfNotif" : {
+        "message": "Order is confirmed"
+      },
+      "error" : "Something went wrong!"
+    },
+    "orders" : {
+      "date" : "Invoice created",
+      "paymentDate" : "Payment Date",
+      "paimentStatus" : "Payment Status",
+      "plannedDeliveryDate" : "Expected delivery date",
+      "totalsum" : "Totalsum",
+      "status" : "Status"
+    },
+    "status" : {
+      "PENDING" : "Pending",
+      "CANCELED" : "Canceled",
+      "IN_PROGRESS" : "In Progress",
+      "DELIVERED" : "Delivered"
+    },
+    "paymentStatus" : {
+      "UNPAID" : "Unpaid",
+      "PAID" : "Paid",
+      "OVERPAID": "Overpaid",
+      "UNDERPAID": "Underpaid"
+    },
+    "loginWind" : {
+      "login": "Log in to the webshop",
+      "name": "Account name",
+      "password": "Account password",
+      "lost": "Lost your password",
+      "new": "New to the webshop",
+      "contact": "Contact",
+      "wrong": "Wrong username or password"
+
+    }
+  }

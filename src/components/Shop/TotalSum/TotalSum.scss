@@ -1,0 +1,13 @@
+@import '../../../variables';
+
+.total_sum {
+    text-align: right;
+    margin-top: 50px;
+    padding: 0 90px;
+
+    @media(max-width: 768px){
+        padding: 0;
+        text-align: center;
+    }
+
+}

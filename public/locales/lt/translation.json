@@ -1,0 +1,74 @@
+{
+  "logIn": "Prisijungti",
+  "logOut": "Atsijungti",
+  "order": "Užsakyti",
+  "ordered": "Užsakyta",
+  "cart": "Krepšelis tuščias",
+  "confirmOrder": "Tvirtinti užsakymą",
+  "back": "atgal į parduotuvę",
+  "backorder": "Atgal prie užsakymų",
+  "changeDate": "Keisti data?",
+  "download": "Parsisiųsti",
+  "deliveryDate": "Pristatymo data",
+  "orderInHolland": "Užsisakykite Niderlandų skyriuje",
+    "pages" : {
+      "aboutUs" : "Apie mus",
+      "contacts" : "Kontaktai",
+      "shop" : "Parduotuvė",
+      "orders" : "Užsakymai"
+    },
+    "filters" : {
+      "color" : "Spalva",
+      "flowers" : "Kategorija",
+      "search" : "IEŠKOTI PAGAL PAVADINIMĄ, KATEGORIJĄ, ID",
+      "show" : "Rodyti po"
+    },
+    "params" : {
+      "length" : "Aukštis",
+      "amount" : "Viso sandėlyje",
+      "quality" : "Kokybė",
+      "color" : "Spalva",
+      "price" : "Kaina",
+      "supplier" : "Tiekėjas",
+      "totalAmount" : "Bendras kiekis",
+      "totalSumm" : "Suma",
+      "quantity" : "Kiekis",
+      "name" : "Pavadinimas"
+    },
+    "message" : {
+      "orderConfirmed" : "Patvirtinus užsakymą, tolimesnes detales atsiųsime nurodytu el. paštu Kyla bėdų užsakant?",
+      "orderConfNotif" : {
+        "message": "Užsakymas patvirtintas"
+      },
+      "error" : "Įvyko klaida!"
+    },
+    "orders" : {
+      "date" : "Sąskaita išrasytą",
+      "paymentDate" : "Apmokėti iki",
+      "paimentStatus" : "Mokėjimo būsena",
+      "plannedDeliveryDate" : "Planuojama pristatymo data",
+      "totalsum" : "Viso",
+      "status" : "Būsena"
+    },
+    "status" : {
+      "PENDING" : "Rengiamas",
+      "CANCELED" : "Atšauktas",
+      "IN_PROGRESS" : "Vykdomas",
+      "DELIVERED" : "Pristatyta"
+    },
+    "paymentStatus" : {
+      "UNPAID" : "Neapmokėta",
+      "PAID" : "Apmokėta",
+      "OVERPAID": "Permokėta",
+      "UNDERPAID": "Nepilnai apmokėta"
+    },
+    "loginWind" : {
+      "login": "Prisijungti prie parduotuvės",
+      "name": "Vardas",
+      "password": "Slaptažodis",
+      "lost": "Pamiršote slaptažodį",
+      "new": "Pirmą kartą pas mus",
+      "contact": "Susisiekite",
+      "wrong": "Neteisingi duomenys"
+    }
+  }

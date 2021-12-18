@@ -1,0 +1,75 @@
+{
+  "logIn": "Kirjaudu sisään",
+  "logOut": "Uloskirjautuminen",
+  "order": "Tilata",
+  "ordered": "Tilattu",
+  "confirmOrder": "Vahvista tilaus",
+  "back": "takaisin kauppaan",
+  "backorder": "Takaisin tilauksiin",
+  "cart": "Kärry on tyhjä",
+  "changeDate": "Muuta päivämäärää?",
+  "download": "Ladata",
+  "deliveryDate": "Toimituspäivä",
+  "orderInHolland": "Order in Holland department",
+    "pages" : {
+      "aboutUs" : "Meistä",
+      "contacts" : "Yhteystiedot",
+      "shop" : "Verkkokauppa",
+      "orders" : "Tilauksia"
+    },
+    "filters" : {
+      "color" : "Väri",
+      "flowers" : "Kategoria",
+      "search" : "HAE NIMEN, KATEGORIAN MUKAAN TAI ID",
+      "show" : "Näytä"
+    },
+    "params" : {
+      "length" : "Pituus",
+      "amount" : "Määrä",
+      "quality" : "Laatu",
+      "color" : "Väri",
+      "price" : "Hinta",
+      "supplier" : "Toimittaja",
+      "totalAmount" : "Kokonaismäärä",
+      "totalSumm" : "Summa",
+      "quantity" : "Määrä",
+      "name" : "Nimi"
+    },
+    "message" : {
+      "orderConfirmed" : "Tilauksen vahvistamisen jälkeen kaikki lisätiedot lähetetään sähköpostiisi. Jos sinulla on kysyttävää, soita",
+      "orderConfNotif" : {
+        "message": "Tilaus on vahvistettu"
+      },
+      "error" : "Jotain meni pieleen!"
+    },
+    "orders" : {
+      "date" : "Lasku luotu",
+      "paymentDate" : "Maksupäivä",
+      "paimentStatus" : "Maksun tilanne",
+      "plannedDeliveryDate" : "Odotettu kuormapäivä",
+      "totalsum" : "Kokonaissumma",
+      "status" : "Status"
+    },
+    "status" : {
+      "PENDING" : "Odottaa",
+      "CANCELED" : "Peruutettu",
+      "IN_PROGRESS" : "Meneillään",
+      "DELIVERED" : "Toimitettu"
+    },
+    "paymentStatus" : {
+      "UNPAID" : "Palkaton",
+      "PAID" : "Maksettu",
+      "OVERPAID": "Ylimaksettu",
+      "UNDERPAID": "Alipalkattu"
+    },
+    "loginWind" : {
+      "login": "Log in to the webshop",
+      "name": "Account name",
+      "password": "Account password",
+      "lost": "Lost your password",
+      "new": "New to the webshop",
+      "contact": "Contact",
+      "wrong": "Väärä käyttäjätunnus tai salasana"
+    }
+  }
+

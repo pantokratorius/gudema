@@ -1,0 +1,92 @@
+@import '../../../variables';
+
+.filter {
+    margin: 150px 0 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    @media (max-width: 1050px) {
+        flex-wrap: wrap;
+        margin: 150px 0 100px;
+    }
+
+    .select-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+            width: 50px;
+        }
+    }
+
+    .select-group:nth-child(2) {
+        @media (max-width: 425px) {
+            margin-top: 30px;
+        }
+    }
+
+    select {
+        border: none;
+        // width: 50px;
+
+        &:focus {
+            border-color: white;
+            box-shadow: none;
+            color: black
+        }
+    }
+
+
+    .search-query {
+        width: 500px;
+        margin-left: 100px;
+        position: relative;
+
+        
+        @media (max-width: 1050px) {
+            margin-left: 0;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 400px) {
+            width: 100%;
+        }
+    }
+
+    .search-query:after {
+        content: "\203A";
+        position: absolute;
+        top: 0px;
+        right: 20px;
+        font-weight: bold;
+        font-size: 21px;
+
+
+        @media (max-width: 500px) {
+            content: "";
+        }
+
+    }
+    
+
+}
+
+
+input[type="text"], input[type="password"]  {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid $color;
+    border-radius: 0;
+    text-align: center;
+}
+
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: none;
+    outline: 0;
+    box-shadow: 0 0 0 0;
+}
