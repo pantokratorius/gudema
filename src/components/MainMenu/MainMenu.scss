@@ -8,6 +8,11 @@
         position: relative; 
         width: 100px; 
         display: none;
+        text-transform: uppercase;
+        
+        a {
+            font-size: 19px;
+        }
 
         @media (max-width: 900px) {
             display: inline-block;
@@ -81,7 +86,7 @@
         .arrow {
             position: absolute;
             top: 1px;
-            right: 23px;
+            right: 21px;
             font-size: 20px;
             transform: rotate(-90deg);
             font-weight: bold;

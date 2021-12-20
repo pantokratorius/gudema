@@ -43,7 +43,7 @@ const Header = props => {
     i18n.changeLanguage(language);
   };
 
-  const langs = ['LT', 'EN', 'FIN', 'RU']
+  const langs = ['lt', 'en', 'fin', 'ru']
 
  const handleLangClick = lang => {
     changeLanguage(lang)
@@ -67,7 +67,7 @@ const Header = props => {
             <ul className="links">
                 <li><a onClick={props.toggleMenu} href='#'><img src={dots} alt="" /></a></li>
                 <li id="login"><a onClick={props.authFormToggle} href="#">{props.isAuth ? props.authUsername : t('logIn')}</a></li>
-                <li style={{position: 'relative'}}><a href="#" onClick={props.toggleLangs.bind(this,!props.langsOpen)}>{currentLanguage}</a>
+                <li style={{position: 'relative', textTransform: 'uppercase', fontSize: '13px'}}><a href="#" onClick={props.toggleLangs.bind(this,!props.langsOpen)}>{currentLanguage}</a>
                   <ul className={props.langsOpen ? 'slideOut' : null}>
                     {langs.map((lang, i)=> {
                       if(lang != currentLanguage)
