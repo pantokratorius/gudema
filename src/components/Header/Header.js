@@ -43,7 +43,7 @@ const Header = props => {
     i18n.changeLanguage(language);
   };
 
-  const langs = ['lt', 'en', 'fin', 'ru']
+  const langs = ['LT', 'EN', 'FIN', 'RU']
 
  const handleLangClick = lang => {
     changeLanguage(lang)

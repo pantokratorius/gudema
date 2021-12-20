@@ -18,7 +18,7 @@ import { useTranslation } from "react-i18next";
       i18n.changeLanguage(language);
     };
   
-    const langs = ['lt', 'en', 'fin', 'ru']
+    const langs = ['LT', 'EN', 'FIN', 'RU']
   
 
     const handleLangClickMobile = lang => {
