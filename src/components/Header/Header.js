@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./Header.scss"
 import dots from "../../images/dots.png"
 import cart from "../../images/cart.png"
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import * as headerActions from '../../actions/header'
 import * as shopActions from '../../actions/shop'
 import { connect } from 'react-redux'
@@ -63,9 +63,16 @@ const Header = props => {
         <div className="header">
             <div className="logo">
                 <Link to="/home"><img src={logo} alt="logo" /></Link>
+                {props.isAuth ?
+                <ul>
+                  <li><NavLink to="/orders">{t('pages.orders')}</NavLink></li>
+                  <li><NavLink to="/shop">{t('pages.shop')}</NavLink></li>
+                </ul>
+                : null 
+                }
             </div>
             <ul className="links">
-                <li><a onClick={props.toggleMenu} href='#'><img src={dots} alt="" /></a></li>
+                <li className="dots"><a onClick={props.toggleMenu} href='#'><img src={dots} alt="" /></a></li>
                 <li id="login"><a onClick={props.authFormToggle} href="#">{props.isAuth ? props.authUsername : t('logIn')}</a></li>
                 <li style={{position: 'relative', textTransform: 'uppercase', fontSize: '13px'}}><a href="#" onClick={props.toggleLangs.bind(this,!props.langsOpen)}>{currentLanguage}</a>
                   <ul className={props.langsOpen ? 'slideOut' : null}>

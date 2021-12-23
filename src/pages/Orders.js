@@ -4,7 +4,7 @@ import Footer from "../components/Footer/Footer";
 import Preloader from "../components/Preloader/Preloader";
 import * as shopActions from './../actions/shop'
 import { bindActionCreators } from 'redux';
-import { Table } from "react-bootstrap";
+import { Button, Table } from "react-bootstrap";
 import classes from './scss/Orders.module.scss'
 import Order from "../components/Order/Order";
 import moment from "moment"
@@ -30,6 +30,15 @@ const Orders = props => {
       e.preventDefault()
     }
 
+    const downloadOrders = () => {
+        const link = document.createElement('a');
+        link.href = '/api/orders/orders.pdf';
+        link.setAttribute('download','api/orders/orders.pdf')
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+
     return(
         <>    
             <div>
@@ -38,6 +47,7 @@ const Orders = props => {
                   :
                   props.orders 
                     ?
+                    <>
                   <Table striped bordered hover responsive="md" className={classes.orders}>
                     <thead>
                         <tr>
@@ -66,9 +76,12 @@ const Orders = props => {
                       ))}
                       </tbody>
                       </Table>
+                       <Button className='info' style={{float: 'right'}} onClick={downloadOrders}>{t('download')} pdf</Button>
+                       </>
                       :
                       null
                   }
+                 
                 </div>
               <PaginationOrders
                  getOrders={props.getOrders} 
