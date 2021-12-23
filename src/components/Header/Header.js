@@ -16,6 +16,7 @@ import './../../i18n'
 import { useTranslation } from "react-i18next";
 import {  useHistory } from "react-router";
 import { useCookies } from "react-cookie";
+import axios from 'axios'
 
 
 
@@ -39,8 +40,10 @@ const Header = props => {
 
   const { t, i18n } = useTranslation();
   const currentLanguage = Object.keys(cookies).length ? cookies.lang : i18n.translator.language
+
   const changeLanguage = language => { 
     i18n.changeLanguage(language);
+    axios.put(`/api/user/lang/${language}`)
   };
 
   const langs = ['lt', 'en', 'fin', 'ru']
@@ -85,7 +88,10 @@ const Header = props => {
                   </ul>
                   </li>
                 <li style={{position: 'relative'}} >
-                  <Link to={props.isAuth && amount > 0 ? "/cart" : "#"}><img src={cart} alt="" /></Link>
+                {props.isAuth ?
+                  <Link to={amount > 0 ? "/cart" : "#"}><img src={cart} alt="" /></Link>
+                  : null
+                }
                   {amount > 0 && props.isAuth ? <span className={`badge ${amount.toString().length >2 && "thirty"}`} >{amount}</span> : null}
                   {!amount  && props.isAuth ? <EmptyCartPop cls="trigger" /> : null }
                 </li>

@@ -7,6 +7,7 @@ import { bindActionCreators } from 'redux';
 import { NavLink } from "react-router-dom";
 import './../../i18n'
 import { useTranslation } from "react-i18next";
+import axios from "axios";
 
 
 
@@ -16,6 +17,7 @@ import { useTranslation } from "react-i18next";
     const currentLanguage = i18n.translator.language
     const changeLanguage = (language) => { 
       i18n.changeLanguage(language);
+      axios.put(`/api/user/lang/${language}`)
     };
   
     const langs = ['lt', 'en', 'fin', 'ru']

@@ -20,6 +20,23 @@
         padding: 40px 0 50px;
     }
 
+    .buttons_wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        button {
+            // font-weight: bold;
+            margin-right: 10px;
+            background: $color;
+            border-radius: 15px;
+            padding: 2px 9px 1px;
+            color: #fff;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+    }
+
     .close {
         font-weight: bold;
         background: $color;

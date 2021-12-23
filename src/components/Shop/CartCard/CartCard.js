@@ -73,7 +73,10 @@ const CartCard = props => {
                 </div>
                 {!ordered
                   ?
-                  <span className="close" onClick={props.removeItem.bind(this, props.item.id, history)}>&times;</span>
+                  <div className="buttons_wrap">
+                    <button>add comment</button>
+                    <span className="close" onClick={props.removeItem.bind(this, props.item.id, history)}>&times;</span>
+                  </div>
                   : null
                   }
             </div>
