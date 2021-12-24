@@ -11,6 +11,8 @@
   "download": "Ladata",
   "deliveryDate": "Toimituspäivä",
   "orderInHolland": "Order in Holland department",
+  "comment" : "Kommentti",
+  "save" : "Tallentaa",
     "pages" : {
       "aboutUs" : "Meistä",
       "contacts" : "Yhteystiedot",

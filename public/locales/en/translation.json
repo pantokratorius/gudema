@@ -11,6 +11,8 @@
   "download": "Download",
   "deliveryDate": "Delivery date",
   "orderInHolland": "Order in Holland department",
+  "comment" : "Comment",
+  "save" : "Save",
     "pages" : {
       "aboutUs" : "About us",
       "contacts" : "Contacts",

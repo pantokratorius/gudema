@@ -507,7 +507,20 @@ export const changeAmount = (id, quantity) => (
       payload: id
     }}
 
-    export const saveComment = id => {
+    export const saveComment = (id, note) => (
+    async dispatch => { 
+      const url = `/api/cart/${id}/note`
+      const params = {note}
+      try {
+           await axios.put(url, params)
+          await dispatch(setSaveComment(id))
+        } catch (err) {
+           console.error(err)
+        }
+      }
+    )
+
+    export const setSaveComment = id => {
       return{
       type: "SAVE_COMMENT",
       payload: id
@@ -515,7 +528,7 @@ export const changeAmount = (id, quantity) => (
 
 
     export const editNoteHandler = (id, e) =>{
-      console.log(e.target.value);
+      // console.log(e.target.value);
       return {
         type: 'EDIT_NOTE',
         payload: [id, e.target.value]

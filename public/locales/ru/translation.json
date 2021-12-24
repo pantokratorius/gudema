@@ -11,6 +11,8 @@
   "download": "Скачать",
   "deliveryDate": "Дата доставки",
   "orderInHolland": "Заказывайте в отделении Ниддерландов",
+  "comment" : "Комментарий",
+  "save" : "Сохранить",
     "pages" : {
       "aboutUs" : "О нас",
       "contacts" : "Контакты",

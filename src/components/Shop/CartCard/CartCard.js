@@ -28,6 +28,11 @@ const CartCard = props => {
     const item = props.item.product
     const ordered = props.item.ordered
 
+const setCursor = e => {
+  e.target.scrollTop = 50
+  e.currentTarget.setSelectionRange(e.currentTarget.value.length, e.currentTarget.value.length)
+}
+
     return(
         <>
         <div className="Cart-card">
@@ -56,13 +61,13 @@ const CartCard = props => {
                 
                 props.item.hasOwnProperty('editNote') && props.item.editNote === true ?
                 <>
-                  <textarea maxLength={255} autoFocus onChange={props.editNoteHandler.bind(this, props.item.id)} value={props.item.note}></textarea>
-                  <Button className="comment_button save" onClick={props.saveComment.bind(this, props.item.id)}>Save</Button>
+                  <textarea autoFocus maxLength={255} onFocus={setCursor.bind(this)} onChange={props.editNoteHandler.bind(this, props.item.id)} value={props.item.note}></textarea>
+                  <Button className="comment_button save" onClick={props.saveComment.bind(this, props.item.id, props.item.note)}>{t('save')}</Button>
                   </>
                   :
                     <>
-                      <div className="textarea" onClick={props.editComment.bind(this, props.item.id)}>{props.item.note}</div>
-                      <button className="comment_button" onClick={props.editComment.bind(this, props.item.id)}>comment</button>
+                      <div className="textarea" style={props.item.note?.length ? {borderBottom:'1px solid'}: null}>{props.item.note}</div>
+                      <button className="comment_button" onClick={props.editComment.bind(this, props.item.id)}>{t('comment')}</button>
                     </>
                   : 
                   null
