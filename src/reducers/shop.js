@@ -24,12 +24,29 @@ const initialState = {
     pagesOrder: 0,
     itemsTotalOrder: 0,
     filterParamsOrder: {},
-    notification: null
+    notification: null,
   };
   
   export default function shop (state = initialState, action)  {
     switch (action.type) {
 
+      case "EDIT_NOTE":
+        return {
+          ...state,
+          cart: state.cart.map(item=>(item.id == action.payload[0] ? {...item, note: action.payload[1]} : {...item}))
+        };
+
+      case "SAVE_COMMENT":
+        return {
+          ...state,
+          cart: state.cart.map(item=>(item.id == action.payload ? {...item, editNote: false} : {...item}))
+        };
+
+      case "EDIT_COMMENT":
+        return {
+          ...state,
+          cart: state.cart.map(item=>(item.id == action.payload ? {...item, editNote: true} : {...item}))
+        };
       case "SET_ORDERS":
         return {
           ...state,

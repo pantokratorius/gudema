@@ -5,10 +5,12 @@ import { connect } from "react-redux";
 import { bindActionCreators } from 'redux'
 import { useHistory } from "react-router";
 import { useTranslation } from "react-i18next";
+import { Button } from "react-bootstrap";
 
 
 const CartCard = props => { 
 
+  
     const history = useHistory()
     const { t } = useTranslation();
    
@@ -47,7 +49,24 @@ const CartCard = props => {
 
                     </ul>
                 </div>
-            </div>
+                </div>
+                {
+                 props.item.ordered === false ?
+                
+                
+                props.item.hasOwnProperty('editNote') && props.item.editNote === true ?
+                <>
+                  <textarea maxLength={255} autoFocus onChange={props.editNoteHandler.bind(this, props.item.id)} value={props.item.note}></textarea>
+                  <Button className="comment_button save" onClick={props.saveComment.bind(this, props.item.id)}>Save</Button>
+                  </>
+                  :
+                    <>
+                      <div className="textarea" onClick={props.editComment.bind(this, props.item.id)}>{props.item.note}</div>
+                      <button className="comment_button" onClick={props.editComment.bind(this, props.item.id)}>comment</button>
+                    </>
+                  : 
+                  null
+                }
 
             <div className="controls-wrap">
                 <div className="controls">  
@@ -74,7 +93,6 @@ const CartCard = props => {
                 {!ordered
                   ?
                   <div className="buttons_wrap">
-                    <button>add comment</button>
                     <span className="close" onClick={props.removeItem.bind(this, props.item.id, history)}>&times;</span>
                   </div>
                   : null
@@ -92,6 +110,7 @@ const CartCard = props => {
 const mapStateToProps = (state) => ({
     cart: state.shop.cart,
     cartTemp: state.shop.cartTemp,
+    note: state.shop.note,
   });
     
     const mapDispatchToProps = dispatch => ({

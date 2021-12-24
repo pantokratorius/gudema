@@ -500,3 +500,24 @@ export const changeAmount = (id, quantity) => (
       type: "CLOSE_ORDER",
     })
   
+
+    export const editComment = id => {
+      return{
+      type: "EDIT_COMMENT",
+      payload: id
+    }}
+
+    export const saveComment = id => {
+      return{
+      type: "SAVE_COMMENT",
+      payload: id
+    }}
+
+
+    export const editNoteHandler = (id, e) =>{
+      console.log(e.target.value);
+      return {
+        type: 'EDIT_NOTE',
+        payload: [id, e.target.value]
+      }
+    }
