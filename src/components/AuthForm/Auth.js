@@ -53,7 +53,7 @@ import { useTranslation } from "react-i18next";
                     <Card style={{ width: '18rem' }}><span className="close-popup" onClick={props.hideAuthHandler}>&times;</span>
                         <Card.Body>
                             <Card.Title><b>{t('orderInHolland')}</b></Card.Title>
-                            <Card.Text style={{fontSize: "15px", marginTop: "30px", marginBottom: "30px"}}>
+                            <Card.Text style={{fontSize: "15px", marginTop: "10px", marginBottom: "10px"}}>
                             <ul style={{textAlign: 'left'}}>
                                 <li><b>Flowers</b></li>
                                 <li><b>Plants</b></li>
@@ -62,6 +62,7 @@ import { useTranslation } from "react-i18next";
                               </ul>
                             </Card.Text>
                             <Card.Link href="https://shop.floraplaza.nl/floraplaza/en/EUR/login" target="_blank">Floraplaza</Card.Link>
+                            {/* <Card.Link href="https://www.xlflor.com/en/homexl" target="_blank" style={{marginTop: '10px'}}>Xlflor</Card.Link> */}
                         </Card.Body>
                     </Card>
             </div>

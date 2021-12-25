@@ -78,9 +78,9 @@ const Header = props => {
               <li>
                   <a href="https://shop.floraplaza.nl/floraplaza/en/EUR/login" target="_blank">Floraplaza</a>
                 </li>
-              <li>
+              {/* <li>
                 <a href="https://www.xlflor.com/en/homexl" target="_blank">Xlflor</a>
-              </li>
+              </li> */}
             </ul>
             <ul className="links">
                 <li className="dots"><a onClick={props.toggleMenu} href='#'><img src={dots} alt="" /></a></li>

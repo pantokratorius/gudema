@@ -13,6 +13,10 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 0;
+
+        @media (max-width: 800px){
+           display: none;
+        }
         
         li {
             
@@ -62,15 +66,15 @@
                 padding-left: 1rem;
             }
 
-            @media (max-width: 768px){
+            @media (max-width: 1000px){
                 display: none;
             }
 
             li {
                 margin: 0 20px;
 
-                @media (max-width: 850px){
-                    margin: 0 15px;
+                @media (max-width: 1150px){
+                    margin: 0 10px;
                 }
 
             }
@@ -81,6 +85,7 @@
                 background: #2b48da;
                 border-radius: 20px;
                 padding: 3px 15px 4px 15px;
+                white-space: nowrap;
             }
         }
     
@@ -126,7 +131,7 @@
         .dots {
             display: none;
 
-            @media (max-width: 768px){
+            @media (max-width: 1000px){
                 display: block;
             }
         }
