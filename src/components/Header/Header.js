@@ -74,6 +74,14 @@ const Header = props => {
                 : null 
                 }
             </div>
+            <ul className="outerLinks">
+              <li>
+                  <a href="https://shop.floraplaza.nl/floraplaza/en/EUR/login" target="_blank">Floraplaza</a>
+                </li>
+              <li>
+                <a href="https://www.xlflor.com/en/homexl" target="_blank">Xlflor</a>
+              </li>
+            </ul>
             <ul className="links">
                 <li className="dots"><a onClick={props.toggleMenu} href='#'><img src={dots} alt="" /></a></li>
                 <li id="login"><a onClick={props.authFormToggle} href="#">{props.isAuth ? props.authUsername : t('logIn')}</a></li>

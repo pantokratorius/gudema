@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Form, Button, Card } from "react-bootstrap";
 import './Auth.scss'
 import * as authActions from '../../actions/auth'

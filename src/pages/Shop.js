@@ -8,15 +8,11 @@ import ShoppingCardPopup from "../components/Shop/ShoppingCardPopup/ShoppingCard
 import * as shopactions from '../actions/shop'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import slide1 from '../images/slide-shop.png'
-import slide2 from '../images/slide-shop2.png'
-import slide3 from '../images/slide-shop3.png'
 import Preloader from "../components/Preloader/Preloader";
 
 
 const Shop = props => {
     
-    const images = [slide1, slide2, slide3]
     
     document.title ="Gudema e-shop"; 
     

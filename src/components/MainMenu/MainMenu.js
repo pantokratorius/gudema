@@ -1,5 +1,4 @@
 import React from "react";
-import { Form, Button, Card } from "react-bootstrap";
 import './MainMenu.scss'
 import * as headerActions from '../../actions/header'
 import { connect } from "react-redux";

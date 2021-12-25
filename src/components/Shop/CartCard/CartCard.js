@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./CartCard.scss"
 import * as shopActions from '../../../actions/shop'
 import { connect } from "react-redux";

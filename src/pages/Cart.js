@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import Footer from "../components/Footer/Footer";
 import CartCard from "../components/Shop/CartCard/CartCard";
@@ -7,7 +7,6 @@ import { bindActionCreators } from 'redux';
 import {  useHistory } from "react-router";
 import TotalSum from "../components/Shop/TotalSum/TotalSum";
 import ConfirmationButton from "../components/Shop/ConfirmationButton/ConfirmationButton";
-import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import './scss/Cart.scss'
 import DateSelect from "../components/Cart/DateSelect/DateSelect";
@@ -35,8 +34,6 @@ const Cart = props => {
 
   const history = useHistory()
 
-  const ref = useRef()
-  const select = props.dateSelect
   
   document.title ="Gudema Cart"; 
  
@@ -53,7 +50,7 @@ const Cart = props => {
     return(
       <>
         <NotificationContainer  />
-          <Link to="/shop" style={{textAlign:'right', paddingRight: '90px', display: 'block'}}>{t('back')}</Link>
+          {/* <Link to="/shop" style={{textAlign:'right', paddingRight: '90px', display: 'block'}}>{t('back')}</Link> */}
           <p style={{textAlign:'right', paddingRight: '90px', display: 'block', cursor:'pointer', marginBottom:"0", marginTop:"10px", fontSize: '19px'}} >{t('deliveryDate')}: <span style={{color:'#0d6efd'}} onClick={!props.dateSelect ? props.toggleDates.bind(this) : null}>
             {!props.dateSelect
             ?

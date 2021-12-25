@@ -57,7 +57,6 @@ const mapStateToProps = state => ({
    password: state.auth.password,
    isAuth: !!state.auth.authUsername,
    alert: state.auth.alert,
-   username: state.auth.username,
    authUsername: state.auth.authUsername
 });
   
