@@ -23,9 +23,10 @@ const Order = props => {
    
 
     return(
-        <>
+        <div style={{marginTop:'70px'}}>
             
-            <Table className="order" striped bordered hover responsive="md" style={{marginTop: "50px"}}>
+            <Button style={{borderRadius: '20px'}} size="sm" variant="outline-primary" onClick={props.closeOrder.bind(this)}>{t('backorder')}</Button>
+            <Table className="order" striped bordered hover responsive="md" style={{marginTop: "20px"}}>
                 <thead>
                     <tr>
                         <th>{t('params.name')}</th>
@@ -49,12 +50,12 @@ const Order = props => {
                     ))}
                 </tbody>
             </Table>
-            <Button onClick={props.closeOrder.bind(this)}>{t('backorder')}</Button>
+            <Button style={{borderRadius: '20px'}} size="sm" variant="outline-primary" onClick={props.closeOrder.bind(this)}>{t('backorder')}</Button>
             {props.order[1] ?
-                <Button className='info' style={{float: 'right'}} onClick={downloadPdf}>{t('download')} pdf</Button>
+                <Button size="sm" variant="outline-primary" style={{float: 'right', borderRadius: '20px'}} onClick={downloadPdf}>{t('download')} pdf</Button>
                 : null 
             }
-        </>
+        </div>
     )
 }
 

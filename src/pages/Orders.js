@@ -20,6 +20,7 @@ const Orders = props => {
     document.title ="Gudema Orders"
 
     useEffect (() => {
+      props.closeOrder()
         props.getOrders()   
         return () => {
             props.changeReady(false)
@@ -76,23 +77,24 @@ const Orders = props => {
                       ))}
                       </tbody>
                       </Table>
-                       <Button className='info' style={{float: 'right'}} onClick={downloadOrders}>{t('download')} pdf</Button>
+                       <Button size="sm" variant="outline-primary" style={{float: 'right', borderRadius: '20px'}} onClick={downloadOrders}>{t('download')} pdf</Button>
+                       <PaginationOrders
+                        getOrders={props.getOrders} 
+                        page={props.pageOrder} 
+                        pages={props.pagesOrder} 
+                        data={props.orders} 
+                        setPages={props.setPagesOrder} 
+                        setPages={props.setPageOrder} 
+                        filterParams={props.filterParamsOrder}
+                        setLimitOffset={props.setLimitOffsetOrder}  
+                      />
                        </>
                       :
                       null
                   }
                  
                 </div>
-              <PaginationOrders
-                 getOrders={props.getOrders} 
-                 page={props.pageOrder} 
-                 pages={props.pagesOrder} 
-                 data={props.orders} 
-                 setPages={props.setPagesOrder} 
-                 setPages={props.setPageOrder} 
-                 filterParams={props.filterParamsOrder}
-                 setLimitOffset={props.setLimitOffsetOrder}  
-              />
+              
             {!props.isReady ?
                   <Preloader />
                   :
