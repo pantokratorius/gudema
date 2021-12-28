@@ -60,7 +60,7 @@
     },
     "paymentStatus" : {
       "UNPAID" : "Не оплачен",
-      "PAID" : "Оплачен",
+      "PAIDED" : "Оплачен",
       "OVERPAID": "Переплачен",
       "UNDERPAID": "Недоплачен"
     },

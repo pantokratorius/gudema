@@ -60,7 +60,7 @@
     },
     "paymentStatus" : {
       "UNPAID" : "Unpaid",
-      "PAID" : "Paid",
+      "PAIDED" : "Paid",
       "OVERPAID": "Overpaid",
       "UNDERPAID": "Underpaid"
     },

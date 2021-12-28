@@ -60,7 +60,7 @@
     },
     "paymentStatus" : {
       "UNPAID" : "Palkaton",
-      "PAID" : "Maksettu",
+      "PAIDED" : "Maksettu",
       "OVERPAID": "Ylimaksettu",
       "UNDERPAID": "Alipalkattu"
     },

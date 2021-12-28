@@ -60,7 +60,7 @@
     },
     "paymentStatus" : {
       "UNPAID" : "Neapmokėta",
-      "PAID" : "Apmokėta",
+      "PAIDED" : "Apmokėta",
       "OVERPAID": "Permokėta",
       "UNDERPAID": "Nepilnai apmokėta"
     },
