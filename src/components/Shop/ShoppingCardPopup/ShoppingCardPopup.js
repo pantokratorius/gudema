@@ -7,6 +7,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from 'redux'
 import * as shopActions from '../../../actions/shop'
 import { useTranslation } from "react-i18next";
+import promo from '../../../images/special.png'
 
 
 
@@ -63,6 +64,10 @@ const ShoppingCardPopup = props => {
                 <Card>
                 <div className="close" onClick={props.closeCart}>&times;</div>
                     <Card.Img  src={props.photoLink} />
+                    {props.specialOffer ?
+                    <Card.Img className="promo" src={promo}  />
+                    : null
+                    }
                     <Card.Body>
                     <div className="title-wrap mb-4">
                         <Card.Title>{props.name}</Card.Title>

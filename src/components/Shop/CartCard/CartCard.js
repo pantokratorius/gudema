@@ -6,6 +6,7 @@ import { bindActionCreators } from 'redux'
 import { useHistory } from "react-router";
 import { useTranslation } from "react-i18next";
 import { Button } from "react-bootstrap";
+import promo from '../../../images/special.png'
 
 
 const CartCard = props => { 
@@ -37,7 +38,13 @@ const setCursor = e => {
         <>
         <div className="Cart-card">
             <div className={"wrap"}>
-                <div className="image"><img src={item.photoLink} alt="" /></div>
+                <div className="image">
+                  <img src={item.photoLink} alt="" />
+                  {item.specialOffer ?
+                  <img className="promo" src={promo}  />
+                  : null
+                  }
+                </div>
                 
                 <div className="info">
                     <ul>

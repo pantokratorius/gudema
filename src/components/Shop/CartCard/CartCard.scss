@@ -160,6 +160,7 @@
         max-width: 270px;
         display: flex;
         align-items: flex-start;
+        position: relative;
 
 
         @media(max-width: 768px){
@@ -170,6 +171,21 @@
         img {
             width: 100%;
         }
+
+        .promo {
+            height: 70px;
+             left: 10%;
+             top: 0px;
+             position: absolute;
+             object-fit: contain;
+             object-position: 0;
+
+             @media (max-width: 600px) {
+                 height: 100px;
+                 top: 20px;
+             }
+
+         }
 
     }
 

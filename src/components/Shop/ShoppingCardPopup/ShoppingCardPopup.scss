@@ -102,6 +102,22 @@
         }
 
 
+
+        .promo {
+            height: 100px;
+             left: 7%;
+             top: 15%;
+             position: absolute;
+             object-fit: contain;
+             object-position: 0;
+
+             @media (max-width: 768px) {
+                 height: 150px;
+                 top: 5%;
+             }
+
+         }
+
         
         img {
             width: 50%;

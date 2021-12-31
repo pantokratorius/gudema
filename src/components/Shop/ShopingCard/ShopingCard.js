@@ -7,6 +7,7 @@ import * as shopActions from '../../../actions/shop'
 import { connect } from "react-redux";
 import { bindActionCreators } from 'redux'
 import { useTranslation } from "react-i18next";
+import promo from '../../../images/special.png'
 
 
 
@@ -63,11 +64,15 @@ const ShopingCard = fl => {
     return(
         <CardGroup className="shopping-cart">
             <Card>
-                <div className="title-wrap mb-2" onClick={fl.showCard.bind(this,fl)}>
+                <div className="title-wrap mb-4" onClick={fl.showCard.bind(this,fl)}>
                     <Card.Subtitle>{fl.name}</Card.Subtitle>   
                     <Card.Subtitle style={{whiteSpace: 'nowrap'}}>{fl.variations[0] && fl.variations[0].unitPrice.toFixed(2)} €</Card.Subtitle>
                  </div>   
                 <Card.Img variant="top" src={fl.photoLink}  onClick={fl.showCard.bind(this,fl)} />
+                {fl.specialOffer ?
+                <Card.Img className="promo" src={promo}  onClick={fl.showCard.bind(this,fl)}  />
+                : null
+                }
                 <Card.Body>
                     <Card.Text style={{textAlign:'left', height: '40px', overflow:'hidden'}}>{t('params.supplier')}: {fl.grower}</Card.Text>
                     <Card.Text>{t('params.length')}: {fl.height}</Card.Text>

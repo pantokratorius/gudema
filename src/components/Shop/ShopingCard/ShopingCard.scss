@@ -17,6 +17,7 @@
         margin-right: 2px;
         box-shadow: 1px 1px 3px #959595;
         
+        
 
         @media (max-width: 600px) {
             min-width: 300px;            
@@ -27,7 +28,20 @@
         }
 
         
+            .promo {
+               height: 70px;
+                left: 10%;
+                top: 70px;
+                position: absolute;
+                object-fit: contain;
+                object-position: 0;
 
+                @media (max-width: 600px) {
+                    height: 100px;
+                    top: 20px;
+                }
+
+            }
 
             img {
                 height: 200px;
