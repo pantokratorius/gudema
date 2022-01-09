@@ -105,10 +105,14 @@
                 }
 
                 > p:not(:first-child) {
-                    font-weight: bold;
+                    
                     text-transform: uppercase;
                     font-size: 15px;
+                    text-align: left;
 
+                    span {
+                        font-weight: bold;
+                    }
 
                     @media (max-width: 600px) {
                         font-size: 16px;
@@ -118,6 +122,11 @@
                 p:first-child {
                     margin-bottom: 5px;
                 }
+
+                .colorParam {
+                    height: 35px;
+                }
+
             }
 
 

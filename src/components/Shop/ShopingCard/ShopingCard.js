@@ -75,10 +75,10 @@ const ShopingCard = fl => {
                 }
                 <Card.Body>
                     <Card.Text style={{textAlign:'left', height: '40px', overflow:'hidden'}}>{t('params.supplier')}: {fl.grower}</Card.Text>
-                    <Card.Text>{t('params.length')}: {fl.height}</Card.Text>
-                    <Card.Text>{t('params.amount')}: {fl.quantity}</Card.Text>
-                    <Card.Text>{t('params.quality')}: {fl.quality}</Card.Text>
-                    <Card.Text>{t('params.color')}: {fl.color}</Card.Text>
+                    <Card.Text><span>{t('params.length')}:</span> {fl.height}</Card.Text>
+                    <Card.Text><span>{t('params.amount')}:</span> {fl.quantity}</Card.Text>
+                    <Card.Text><span>{t('params.quality')}:</span> {fl.quality}</Card.Text>
+                    <Card.Text className="colorParam"><span>{t('params.color')}:</span> {fl.color}</Card.Text>
                     <div className="countWrap"> 
                         <div>
                             <div className="count">
