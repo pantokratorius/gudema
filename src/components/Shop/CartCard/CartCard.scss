@@ -107,7 +107,20 @@
             @media(max-width: 768px){
                 padding-left: 0;
             }
+            
 
+            span {
+                font-weight: bold;
+            }
+            
+            .colorParam {
+                display: flex;
+
+                span {
+                    margin-right: 5px;
+                }
+
+            }
             
         }
 

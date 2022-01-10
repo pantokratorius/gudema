@@ -96,6 +96,20 @@
 
             .card-text {
                 margin-bottom: 5px;
+
+                span {
+                    font-weight: bold;
+                }
+
+            }
+
+            .colorParam {
+                display: flex;
+
+                span {
+                    margin-right: 5px;
+                }
+
             }
 
 

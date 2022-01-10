@@ -53,11 +53,11 @@ const setCursor = e => {
                         
                     </ul>
                     <ul>
-                        <li>{t('params.length')}: {item.height}</li>
-                        <li>{t('params.color')}: {item.color}</li>
-                        <li>{t('params.amount')}: {item.quantity}</li>
-                        <li>{t('params.quality')}: {item.quality}</li>
-                        <li>{t('params.price')}: {props.item.variation.unitPrice.toFixed(2)}</li>
+                        <li><span>{t('params.length')}:</span> {item.height}</li>
+                        <li className="colorParam"><span>{t('params.color')}:</span> {item.color}</li>
+                        <li><span>{t('params.amount')}:</span> {item.quantity}</li>
+                        <li><span>{t('params.quality')}:</span> {item.quality}</li>
+                        <li><span>{t('params.price')}:</span> {props.item.variation.unitPrice.toFixed(2)}</li>
 
                     </ul>
                 </div>

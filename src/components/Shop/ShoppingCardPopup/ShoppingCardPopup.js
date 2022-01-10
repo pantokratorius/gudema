@@ -74,10 +74,10 @@ const ShoppingCardPopup = props => {
                         <Card.Subtitle>{t('params.supplier')}: {props.grower}</Card.Subtitle>
                     </div>   
                     <div>
-                        <Card.Text>{t('params.length')}: {props.height}</Card.Text>
-                        <Card.Text>{t('params.amount')}: {props.quantity}</Card.Text>
-                        <Card.Text>{t('params.quality')}: {props.quality}</Card.Text>
-                    <Card.Text>{t('params.color')}: {props.color}</Card.Text>
+                        <Card.Text><span>{t('params.length')}:</span> {props.height}</Card.Text>
+                        <Card.Text><span>{t('params.amount')}:</span> {props.quantity}</Card.Text>
+                        <Card.Text><span>{t('params.quality')}:</span> {props.quality}</Card.Text>
+                      <Card.Text className="colorParam"><span>{t('params.color')}:</span> {props.color}</Card.Text>
                     </div>    
                         <div className="countWrap">
                             <div>

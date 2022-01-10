@@ -124,7 +124,18 @@
                 }
 
                 .colorParam {
-                    height: 35px;
+                    height: 40px;
+                    display: flex;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                    @media (max-width: 600px) {
+                        height: 45px;
+                    }
+
+                    span {
+                        margin-right: 5px;
+                    }
                 }
 
             }
@@ -154,7 +165,7 @@
 
 
                 .count {
-                    margin-top: 15px;
+                    margin-top: 10px;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
