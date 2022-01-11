@@ -26,9 +26,10 @@ const PaginationOrders = ({pages, data,  getOrders, filterParams, page}) => {
         {
         pages > 1
             ? <ReactPaginate 
-                previousLabel={''}
-                nextLabel={''}
+                previousLabel={'‹'}
+                nextLabel={'›'}
                 pageCount={pages}
+                marginPagesDisplayed={2}
                 onPageChange={pageHandler}
                 containerClassName={'pageNum'}
                 activeClassName={'active'}

@@ -3,11 +3,8 @@ import axios from "axios"
 
 export const getFlowers = (obj = {}) => (
   async dispatch => { 
-    
 
      const url = '/api/products'
-
-     
      try {
           const response = await axios.get(url, {params:{...obj}})
           const data = response.data
@@ -15,6 +12,7 @@ export const getFlowers = (obj = {}) => (
           await dispatch(setItemsTotal(data.totalElements))
           await dispatch(setPages(data.totalPages))
           await dispatch(setFilterParams(obj))
+          window.scrollTo({ top: 0, behavior: 'smooth' });
        } catch (err) {
           console.error(err)
        }
@@ -441,10 +439,8 @@ export const changeAmount = (id, quantity) => (
 
     export const getOrders = (obj = {}) => (
       async dispatch => { 
-        
     
          const url = '/api/orders'
-    
          
          try {
               const response = await axios.get(url, {params:{...obj}})
@@ -454,6 +450,7 @@ export const changeAmount = (id, quantity) => (
               await dispatch(setPagesOrder(data.totalPages))
               await dispatch(setFilterParamsOrder(obj))
               await dispatch(setOrders(data.content))
+              window.scrollTo({ top: 0, behavior: 'smooth' });
            } catch (err) {
               console.error(err)
            }

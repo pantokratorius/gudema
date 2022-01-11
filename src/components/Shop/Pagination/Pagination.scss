@@ -63,6 +63,11 @@
 
         li {
             display: inline-block;
+            border: 1px solid rgb(219, 219, 219);
+
+            a {
+                margin:  0 5px;
+            }
         }
     }
 
