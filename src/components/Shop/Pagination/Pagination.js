@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 
 
 
-const Pagination = ({pages, data, getFlowers, filterParams}) => {
+const Pagination = ({pages, data, getFlowers, filterParams}) => {console.log(filterParams)
 
     
   const { t } = useTranslation();
@@ -16,7 +16,7 @@ const Pagination = ({pages, data, getFlowers, filterParams}) => {
     }
     
     const onChangeHandle = (data,e) => {
-        getFlowers( {...filterParams, size: e.target.value}  )
+        getFlowers( {...filterParams, size: e.target.value, page: 0}  )
     }
 
     return(

@@ -531,3 +531,8 @@ export const changeAmount = (id, quantity) => (
         payload: [id, e.target.value]
       }
     }
+
+    export const setFirstPage = () => ({
+      type: 'SET_FIRST_PAGE_ORDER'
+    })
+    

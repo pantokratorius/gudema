@@ -219,7 +219,7 @@ const initialState = {
               ...state,
               filterParams: action.payload,
             };
-          case "SET_FILTER_PARAMS_ORDER":
+          case "SET_FILTER_PARAMS_ORDER": console.log('vvvvvvvvvvvvvvvvvvvvvvvvv', action.payload);
             return {
               ...state,
               filterParamsOrder: action.payload,
@@ -233,6 +233,11 @@ const initialState = {
             return {
               ...state,
               card:  {...action.payload} 
+            };
+          case "SET_FIRST_PAGE_ORDER": 
+            return {
+              ...state,
+              filterParamsOrder: {...state.filterParamsOrder, page: 0}
             };
          
   
