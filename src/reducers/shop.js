@@ -219,6 +219,11 @@ const initialState = {
               ...state,
               filterParams: action.payload,
             };
+          case "SET_FILTER_PARAMS_ORDER":
+            return {
+              ...state,
+              filterParamsOrder: action.payload,
+            };
           case "SET_GROUPS":
             return {
               ...state,

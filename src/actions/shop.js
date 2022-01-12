@@ -459,7 +459,7 @@ export const changeAmount = (id, quantity) => (
   
     
     export const setFilterParamsOrder = obj =>({
-      type: "SET_FILTER_PARAMS",
+      type: "SET_FILTER_PARAMS_ORDER",
       payload: obj
     })
   
