@@ -16,7 +16,7 @@ const Pagination = ({pages, data, getFlowers, filterParams}) => {console.log(fil
     }
     
     const onChangeHandle = (data,e) => {
-        getFlowers( {...filterParams, size: e.target.value, page: 0}  )
+        getFlowers( {...filterParams, size: e.target.value, page: 0}, document.querySelector('.pageNum li:nth-child(2) a')  )
     }
 
     return(

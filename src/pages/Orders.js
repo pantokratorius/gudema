@@ -87,7 +87,6 @@ const Orders = props => {
                         setPages={props.setPageOrder} 
                         filterParams={props.filterParamsOrder}
                         setLimitOffset={props.setLimitOffsetOrder}  
-                        setFirstPage ={props.setFirstPage }  
                       />
                        </>
                       :

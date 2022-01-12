@@ -234,11 +234,7 @@ const initialState = {
               ...state,
               card:  {...action.payload} 
             };
-          case "SET_FIRST_PAGE_ORDER": 
-            return {
-              ...state,
-              filterParamsOrder: {...state.filterParamsOrder, page: 0}
-            };
+      
          
   
       default:

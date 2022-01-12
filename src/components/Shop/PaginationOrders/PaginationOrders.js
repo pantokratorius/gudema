@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 
 
 
-const PaginationOrders = ({pages, data,  getOrders, filterParams, setFirstPage}) => {
+const PaginationOrders = ({pages, data,  getOrders, filterParams}) => {
     
   const { t } = useTranslation();
     
@@ -15,9 +15,9 @@ const PaginationOrders = ({pages, data,  getOrders, filterParams, setFirstPage})
     }
     
     const onChangeHandleOrder = (data,e) => {
-        getOrders( {...filterParams, size: e.target.value, page: 0}  )
-        setFirstPage()
-    }
+        getOrders( {...filterParams, size: e.target.value}, document.querySelector('.pageNum li:nth-child(2) a') )
+        
+       }
   
 
     return(
