@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 
 
 
-const Pagination = ({pages, data, getFlowers, filterParams}) => {console.log(filterParams)
+const Pagination = ({pages, data, getFlowers, filterParams}) => {
 
     
   const { t } = useTranslation();

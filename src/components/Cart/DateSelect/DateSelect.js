@@ -6,7 +6,7 @@ const DateSelect = props => {
 
     const ref = useRef()
 
-    const checkIfClickedOutside = e => {console.log(ref);
+    const checkIfClickedOutside = e => {
         if (ref.current && !ref.current.contains(e.target)) {
           props.toggleDates()
         }

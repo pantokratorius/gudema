@@ -1,5 +1,5 @@
 const initialState = {
-    items: null,
+    items: [],
  };
   
   export default function flowers (state = initialState, action)  {
@@ -7,9 +7,11 @@ const initialState = {
       case "SET_FLOWERS":
         return {
           ...state,
-          items: action.payload,
+          items: state.items.concat(action.payload),
+          // items: action.payload,
           isReady: true
         };
+     
       case "SET_IS_READY":
         return {
           ...state, 

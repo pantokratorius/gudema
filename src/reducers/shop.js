@@ -5,10 +5,12 @@ const initialState = {
     cart: [],
     cartAmount: 0,
     cartTemp: {},
-    perPage: 20,
+    perPage: 5,
     page: 0,
+    pageNumber: 0,
     pages: 0,
     itemsTotal: 0,
+    totalPages:0,
     filterParams: {},
     colors: [],
     groups: [],
@@ -127,7 +129,7 @@ const initialState = {
       case "SET_PAGE":
         return {
           ...state,
-          page: action.payload,
+          pageNumber: action.payload,
         };
       case "SHOW_CARD":
         return {
@@ -219,7 +221,7 @@ const initialState = {
               ...state,
               filterParams: action.payload,
             };
-          case "SET_FILTER_PARAMS_ORDER": console.log('vvvvvvvvvvvvvvvvvvvvvvvvv', action.payload);
+          case "SET_FILTER_PARAMS_ORDER": 
             return {
               ...state,
               filterParamsOrder: action.payload,

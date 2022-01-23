@@ -3,17 +3,19 @@ import axios from "axios"
 
 export const getFlowers = (obj = {}, el = false) => (
   async dispatch => { 
-
+    
      const url = '/api/products'
      try {
           const response = await axios.get(url, {params:{...obj}})
           const data = response.data
+          console.log('bbbbbbbbbbbbbbb', obj, data);
           await dispatch(setFlowers(data.content))
           await dispatch(setItemsTotal(data.totalElements))
           await dispatch(setPages(data.totalPages))
+          await dispatch(setPage(data.number))
           await dispatch(setFilterParams(obj))   
-          window.scrollTo({ top: 700, behavior: 'smooth' });
-          if(el) await el.click()
+          // window.scrollTo({ top:0, behavior: 'smooth' });
+          // if(el) await el.click()
        } catch (err) {
           console.error(err)
        }
@@ -156,9 +158,16 @@ export const setCartAmount = amount => ({
     payload: flowers
   })
 
+
   export const setPages = pages => ({
     type: 'SET_PAGES',
     payload: pages
+  });
+
+
+  export const setPage = page => ({
+    type: 'SET_PAGE',
+    payload: page
   });
 
   export const setPagesOrder = pages => ({
@@ -527,7 +536,6 @@ export const changeAmount = (id, quantity) => (
 
 
     export const editNoteHandler = (id, e) =>{
-      // console.log(e.target.value);
       return {
         type: 'EDIT_NOTE',
         payload: [id, e.target.value]
