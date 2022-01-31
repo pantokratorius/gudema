@@ -1,6 +1,7 @@
 {
   "logIn": "Login",
   "logOut": "Log out",
+  "loading": "Loading...",
   "order": "Add to cart",
   "ordered": "Ordered",
   "back": "back to shop",

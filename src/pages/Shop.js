@@ -9,80 +9,82 @@ import * as shopactions from '../actions/shop'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Preloader from "../components/Preloader/Preloader";
+import { useTranslation } from "react-i18next";
 import InfiniteScroll from 'react-infinite-scroll-component';
 
 
-const Shop = props => { console.log('pageNumber', props.pageNumber,'totalPages', Math.ceil(props.itemsTotal/5));
-    
-    
-    document.title ="Gudema e-shop"; 
-  
+const Shop = props => {
 
-      useEffect(() => {
-        const {getFlowers, getColors, getGroups} = props;
-            getFlowers({size: 5, page:0})
-            getColors()   
-            getGroups()   
-            props.getContent('home')   
-            return () => {
-                props.changeReady(false)
-              }
-    }, [])
+  const { t } = useTranslation()
 
-    
-    const getNext = () => {console.log(props.pageNumber,props.totalPages, 'ssssssssss');
-      props.getFlowers({size: 5,page: Number(props.pageNumber) +1 })
+  document.title = "Gudema e-shop";
+
+
+  useEffect(() => {
+    const { getFlowers, getColors, getGroups } = props;
+    getFlowers({ size: 5, page: 0 })
+    getColors()
+    getGroups()
+    props.getContent('home')
+    return () => {
+      props.changeReady(false)
     }
-    
-    return(
-        <>
-            {!props.isReady 
-            ?
-            <Preloader />
-            : 
-            <CarouselComponent images={props.content} />
-            }
-            <Filter colors={props.colors} 
-              groups={props.groups} 
-              filterParams={props.filterParams} 
-              getFlowers={props.getFlowers}
-            />
-            {props.flowers && props.flowers.length ? 
-            <div className="shopingCard-wrap">
-                {props.flowers
-                .map((fl, i)=>{
-                    return( 
-                        <ShopingCard key={i} {...fl}  />
-                    )
-                })}
-            </div> 
-            : null }
-               
-                {props.opened
-                ? <ShoppingCardPopup {...props.card} />
-                : null
-                }
+  }, [])
 
-<InfiniteScroll
-  dataLength={props.flowers.length} //This is important field to render the next data
-  next={getNext}
-  hasMore={Math.ceil(props.itemsTotal/5) > Number(props.pageNumber) + 1}
-  loader={<h4>Loading...</h4>}
-  endMessage={''}
-  
->
-{props.flowers && props.flowers.length ? 
-            <div className="shopingCard-wrap">
-                {props.flowers
-                .map((fl, i)=>{
-                    return( 
-                        <ShopingCard key={i} {...fl}  />
-                    )
-                })}
-            </div> 
-            : null }
-</InfiniteScroll>
-                {/* <Pagination 
+
+  const getNext = () => {
+    props.getFlowers({ size: 5, page: Number(props.pageNumber) + 1 })
+  }
+
+  return (
+    <>
+      {!props.isReady
+        ?
+        <Preloader />
+        :
+        <CarouselComponent images={props.content} />
+      }
+      <Filter colors={props.colors}
+        groups={props.groups}
+        filterParams={props.filterParams}
+        getFlowers={props.getFlowers}
+      />
+      {props.flowers && props.flowers.length ?
+        <div className="shopingCard-wrap">
+          {props.flowers
+            .map((fl, i) => {
+              return (
+                <ShopingCard key={i} {...fl} />
+              )
+            })}
+        </div>
+        : null}
+
+      {props.opened
+        ? <ShoppingCardPopup {...props.card} />
+        : null
+      }
+
+      <InfiniteScroll
+        dataLength={props.flowers.length}
+        next={getNext}
+        hasMore={Math.ceil(props.itemsTotal / 5) > Number(props.pageNumber) + 1}
+        loader={<h4>{t('loading')}</h4>}
+        endMessage={''}
+
+      >
+        {props.flowers && props.flowers.length ?
+          <div className="shopingCard-wrap">
+            {props.flowers
+              .map((fl, i) => {
+                return (
+                  <ShopingCard key={i} {...fl} />
+                )
+              })}
+          </div>
+          : null}
+      </InfiniteScroll>
+      {/* <Pagination 
                   getFlowers={props.getFlowers} 
                   page={props.page} 
                   pages={props.pages} 
@@ -92,33 +94,33 @@ const Shop = props => { console.log('pageNumber', props.pageNumber,'totalPages',
                   setPages={props.setPages} 
                   filterParams={props.filterParams}
                 /> */}
-                <Footer hr={true} />
-        </>
-    )
+      <Footer hr={true} />
+    </>
+  )
 }
 
-const mapStateToProps = state => ({ 
-    flowers: state.flowers.items,
-    opened: state.shop.visible,
-    card: state.shop.card,
-    perPage: state.shop.perPage,
-    page: state.shop.page,
-    totalPages: state.shop.totalPages,
-    pageNumber: state.shop.pageNumber,
-    pages: state.shop.pages,
-    isReady: state.shop.isReady,
-    itemsTotal: state.shop.itemsTotal,
-    filterParams: state.shop.filterParams,
-    colors: state.shop.colors,
-    groups: state.shop.groups,
-    content: state.shop.content
+const mapStateToProps = state => ({
+  flowers: state.flowers.items,
+  opened: state.shop.visible,
+  card: state.shop.card,
+  perPage: state.shop.perPage,
+  page: state.shop.page,
+  totalPages: state.shop.totalPages,
+  pageNumber: state.shop.pageNumber,
+  pages: state.shop.pages,
+  isReady: state.shop.isReady,
+  itemsTotal: state.shop.itemsTotal,
+  filterParams: state.shop.filterParams,
+  colors: state.shop.colors,
+  groups: state.shop.groups,
+  content: state.shop.content
 });
-  
-  const mapDispatchToProps = dispatch => ({
-    ...bindActionCreators(shopactions, dispatch),
-  });
-  
-  export default connect (
-    mapStateToProps,
-    mapDispatchToProps,
-  )(Shop);
+
+const mapDispatchToProps = dispatch => ({
+  ...bindActionCreators(shopactions, dispatch),
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(Shop);

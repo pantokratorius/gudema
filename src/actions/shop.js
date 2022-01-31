@@ -8,7 +8,6 @@ export const getFlowers = (obj = {}, el = false) => (
      try {
           const response = await axios.get(url, {params:{...obj}})
           const data = response.data
-          console.log('bbbbbbbbbbbbbbb', obj, data);
           await dispatch(setFlowers(data.content))
           await dispatch(setItemsTotal(data.totalElements))
           await dispatch(setPages(data.totalPages))

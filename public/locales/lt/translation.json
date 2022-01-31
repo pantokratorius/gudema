@@ -1,6 +1,7 @@
 {
   "logIn": "Prisijungti",
   "logOut": "Atsijungti",
+  "loading": "Kraunasi...",
   "order": "Užsakyti",
   "ordered": "Užsakyta",
   "cart": "Krepšelis tuščias",

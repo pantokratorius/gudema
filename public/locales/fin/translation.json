@@ -1,6 +1,7 @@
 {
   "logIn": "Kirjaudu sisään",
   "logOut": "Uloskirjautuminen",
+  "loading": "Lataaminen...",
   "order": "Tilata",
   "ordered": "Tilattu",
   "confirmOrder": "Vahvista tilaus",

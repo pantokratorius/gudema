@@ -11,10 +11,10 @@ import Header from './components/Header/Header';
 function App() {
   return (
       <Suspense fallback={<div>Loading...</div>}>
-      <BrowserRouter>
-        <Header />
-        <AppRouter />
-      </BrowserRouter>
+        <BrowserRouter>
+          <Header />
+          <AppRouter />
+        </BrowserRouter>
       </Suspense>
   );
 }
