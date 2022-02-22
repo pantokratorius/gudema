@@ -72,7 +72,7 @@ const Orders = props => {
                                 <td>{t(`paymentStatus.${item.paidStatus}`)}</td>
                                 <td>{item.plannedDeliveryDate && moment(item.plannedDeliveryDate).format("YYYY-MM-DD")}</td>
                                 <td>{t(`status.${item.status}`)}</td>
-                                <td>{item.totalSum.toFixed(2)}</td>
+                                <td>{item.totalSum && item.totalSum.toFixed(2)}</td>
                             </tr>
                       ))}
                       </tbody>
