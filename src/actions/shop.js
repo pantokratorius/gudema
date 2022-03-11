@@ -1,8 +1,13 @@
 import axios from "axios"
 
 
-export const getFlowers = (obj = {}, el = false) => (
+export const getFlowers = (obj = {}, el = false, filtered = false) => (
   async dispatch => { 
+    console.log('aaaaaaaaaaaaaaaaaaaaaaa',obj);
+    if(filtered){
+       obj.page = 1
+       dispatch(resetFlowers())
+    }
     
      const url = '/api/products'
      try {
@@ -154,6 +159,11 @@ export const setCartAmount = amount => ({
 
   export const setFlowers = flowers => ({
     type: 'SET_FLOWERS',
+    payload: flowers
+  })
+
+  export const resetFlowers = flowers => ({
+    type: 'RESET_FLOWERS',
     payload: flowers
   })
 

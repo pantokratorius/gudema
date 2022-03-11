@@ -11,6 +11,12 @@ const initialState = {
           // items: action.payload,
           isReady: true
         };
+      case "RESET_FLOWERS":
+        return {
+          ...state,
+          items: [],
+          isReady: true
+        };
      
       case "SET_IS_READY":
         return {

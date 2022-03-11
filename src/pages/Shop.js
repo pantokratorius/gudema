@@ -22,7 +22,7 @@ const Shop = props => {
 
   useEffect(() => {
     const { getFlowers, getColors, getGroups } = props;
-    getFlowers({ size: 5, page: 0 })
+    getFlowers({...props.filterParams, size: 5, page: 0 })
     getColors()
     getGroups()
     props.getContent('home')
@@ -33,7 +33,7 @@ const Shop = props => {
 
 
   const getNext = () => {
-    props.getFlowers({ size: 5, page: Number(props.pageNumber) + 1 })
+    props.getFlowers({...props.filterParams, size: 5, page: Number(props.pageNumber) + 1 })
   }
 
   return (
@@ -49,16 +49,7 @@ const Shop = props => {
         filterParams={props.filterParams}
         getFlowers={props.getFlowers}
       />
-      {props.flowers && props.flowers.length ?
-        <div className="shopingCard-wrap">
-          {props.flowers
-            .map((fl, i) => {
-              return (
-                <ShopingCard key={i} {...fl} />
-              )
-            })}
-        </div>
-        : null}
+ 
 
       {props.opened
         ? <ShoppingCardPopup {...props.card} />
