@@ -12,7 +12,7 @@ const Filter = ({colors, groups, getFlowers, filterParams}) => {
     const { t } = useTranslation();
 
 
-    const handleSearch = (key, e) =>{ console.log('handlesearch', filterParams);
+    const handleSearch = (key, e) =>{ 
         let value =  e.target.value !== '' ? e.target.value : null
         getFlowers( {...filterParams, [key]: value}, null, true  )
     }

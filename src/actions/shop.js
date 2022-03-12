@@ -3,10 +3,9 @@ import axios from "axios"
 
 export const getFlowers = (obj = {}, el = false, filtered = false) => (
   async dispatch => { 
-    console.log('aaaaaaaaaaaaaaaaaaaaaaa',obj);
-    if(filtered){
-       obj.page = 1
-       dispatch(resetFlowers())
+    if(filtered){ 
+      await dispatch(resetFlowers())
+      obj.page = 0
     }
     
      const url = '/api/products'
