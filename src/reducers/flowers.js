@@ -4,6 +4,12 @@ const initialState = {
   
   export default function flowers (state = initialState, action)  {
     switch (action.type) {
+      case "FILTER_UNIQ":
+        return {
+          ...state,
+          items: Object.values(state.items.map((item)=> state.items[item.id] = item)),
+          isReady: true
+        };
       case "SET_FLOWERS":
         return {
           ...state,

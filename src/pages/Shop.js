@@ -22,7 +22,7 @@ const Shop = props => {
 
   useEffect(() => {
     const { getFlowers, getColors, getGroups } = props;
-    getFlowers({...props.filterParams, size: 5, page: 0 })
+    getFlowers({...props.filterParams, size: 20, page: 0 })
     getColors()
     getGroups()
     props.getContent('home')
@@ -33,7 +33,7 @@ const Shop = props => {
 
 
   const getNext = () => {
-    props.getFlowers({...props.filterParams, size: 5, page: Number(props.pageNumber) + 1 })
+    props.getFlowers({...props.filterParams, page: Number(props.pageNumber) + 1 })
   }
 
   return (
@@ -59,7 +59,7 @@ const Shop = props => {
       <InfiniteScroll
         dataLength={props.flowers.length}
         next={getNext}
-        hasMore={Math.ceil(props.itemsTotal / 5) > Number(props.pageNumber) + 1}
+        hasMore={Math.ceil(props.itemsTotal / 20) > Number(props.pageNumber) + 1}
         loader={<h4>{t('loading')}</h4>}
         endMessage={''}
 

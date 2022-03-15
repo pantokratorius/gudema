@@ -12,11 +12,14 @@ export const getFlowers = (obj = {}, el = false, filtered = false) => (
      try {
           const response = await axios.get(url, {params:{...obj}})
           const data = response.data
+          if(filtered)
+            await dispatch(resetFlowers())
           await dispatch(setFlowers(data.content))
           await dispatch(setItemsTotal(data.totalElements))
           await dispatch(setPages(data.totalPages))
           await dispatch(setPage(data.number))
           await dispatch(setFilterParams(obj))   
+          await dispatch(filterUniq())
           // window.scrollTo({ top:0, behavior: 'smooth' });
           // if(el) await el.click()
        } catch (err) {
@@ -55,6 +58,11 @@ export const getGroups = () => (
        }
  }
 )
+
+
+export const filterUniq = () =>({
+  type: "FILTER_UNIQ",
+})
 
 
 export const setFilterParams = obj =>({
@@ -161,9 +169,8 @@ export const setCartAmount = amount => ({
     payload: flowers
   })
 
-  export const resetFlowers = flowers => ({
+  export const resetFlowers = () => ({
     type: 'RESET_FLOWERS',
-    payload: flowers
   })
 
 
