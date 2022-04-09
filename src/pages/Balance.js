@@ -2,26 +2,26 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import Footer from "../components/Footer/Footer";
 import Preloader from "../components/Preloader/Preloader";
-import * as shopActions from './../actions/shop'
+import * as shopActions from '../actions/shop'
 import { bindActionCreators } from 'redux';
 import { Button, Table } from "react-bootstrap";
-import classes from './scss/Orders.module.scss'
+import classes from './scss/Balance.module.scss'
 import Order from "../components/Order/Order";
 import moment from "moment"
 import { useTranslation } from "react-i18next";
-import PaginationOrders from "../components/Shop/PaginationOrders/PaginationOrders";
+import PaginationBalances from "../components/Shop/PaginationBalances/PaginationBalances";
 
 
 
-const Hystory = props => {
+const Balance = props => {console.log(props);
 
   const { t } = useTranslation() 
     
-    document.title ="Gudema Orders"
+    document.title ="Gudema Balance"
 
     useEffect (() => {
       props.closeOrder()
-        props.getOrders()   
+        props.getBalance()   
         return () => {
             props.changeReady(false)
           }
@@ -43,13 +43,13 @@ const Hystory = props => {
     return(
         <>    
             <div>
-              {props.order ?
+              {props.balance ?
                   <Order />
                   :
-                  props.orders 
+                  props.balances 
                     ?
                     <>
-                  <Table striped bordered hover responsive="md" className={classes.orders}>
+                  <Table striped bordered hover responsive="md" className={classes.balance}>
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -63,8 +63,8 @@ const Hystory = props => {
                         </tr>
                     </thead>
                     <tbody>
-                        {props.orders.map((item, i)=>(
-                            <tr key={i}  onClick={props.getOrder.bind(this, item.id, item.invoiceLink)} className={classes.hover}>
+                        {props.balances.map((item, i)=>(
+                            <tr key={i}  className={classes.hover}>
                                 <td style={{textAlign:'center'}}>{item.id}</td>
                                 <td>{!item.invoiceLink ? item.invoiceNo : <a href={item.invoiceLink}  onClick={returnFalse}>{item.invoiceNo}</a>}</td>
                                 <td>{item.invoiceDate && moment(item.invoiceDate).format("YYYY-MM-DD")}</td>
@@ -78,15 +78,14 @@ const Hystory = props => {
                       </tbody>
                       </Table>
                        <Button size="sm" variant="outline-primary" style={{float: 'right', borderRadius: '20px'}} onClick={downloadOrders}>{t('download')} pdf</Button>
-                       <PaginationOrders
-                        getOrders={props.getOrders} 
-                        page={props.pageOrder} 
-                        pages={props.pagesOrder} 
-                        data={props.orders} 
-                        setPages={props.setPagesOrder} 
-                        setPages={props.setPageOrder} 
-                        filterParams={props.filterParamsOrder}
-                        setLimitOffset={props.setLimitOffsetOrder}  
+                       <PaginationBalances
+                        getBalance={props.getBalance} 
+                        page={props.pageBalance} 
+                        pages={props.pagesBalance} 
+                        data={props.balances} 
+                        setPages={props.setPagesBalance} 
+                        filterParams={props.filterParamsBalance}
+                        setLimitOffset={props.setLimitOffsetBalance}  
                       />
                        </>
                       :
@@ -107,14 +106,13 @@ const Hystory = props => {
 
   
 const mapStateToProps = state => ({ 
-    orders: state.shop.orders,
-    order: state.shop.order,
+    balances: state.shop.balances,
+    balance: state.shop.balance,
     isReady: state.shop.isReady,
-    perPageOrder: state.shop.perPageOrder,
-    pageOrder: state.shop.pageOrder,
-    pagesOrder: state.shop.pagesOrder,
-    itemsTotalOrder: state.shop.itemsTotalOrder,
-    filterParamsOrder: state.shop.filterParamsOrder,
+    perPageBalance: state.shop.perPageBalance,
+    pageBalance: state.shop.pageBalance,
+    itemsTotalBalance: state.shop.itemsTotalBalance,
+    filterParamsBalance: state.shop.filterParamsBalance,
 });
   
   const mapDispatchToProps = dispatch => ({
@@ -124,4 +122,4 @@ const mapStateToProps = state => ({
   export default connect (
     mapStateToProps,
     mapDispatchToProps,
-  )(Hystory);
+  )(Balance);

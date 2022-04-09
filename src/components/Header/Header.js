@@ -69,6 +69,16 @@ const Header = props => {
                 {props.isAuth ?
                 <ul>
                   <li><NavLink to="/orders">{t('pages.orders')}</NavLink></li>
+
+
+                  <li style={{position: 'relative'}}><a href="#" onClick={props.toggleLangs.bind(this,!props.langsOpen)}>{t('pages.orders')}</a>
+                  <ul className={props.langsOpen ? 'slideOut' : null}>
+                      <li><NavLink to="/orders" onClick={null}>Hystory</NavLink></li>
+                      <li><NavLink to="/balance" onClick={null}>Balance</NavLink></li>
+                  </ul>
+                  </li>
+
+                  
                   <li><NavLink to="/shop">{t('pages.shop')}</NavLink></li>
                 </ul>
                 : null 

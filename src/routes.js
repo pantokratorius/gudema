@@ -1,4 +1,5 @@
 import About from "./pages/About"
+import Balance from "./pages/Balance"
 import Cart from "./pages/Cart"
 import Contacts from "./pages/Contacts"
 import Home from "./pages/Home"
@@ -30,6 +31,10 @@ export const authRoutes = [
     {
         path: '/orders',
         Component: Orders
+    },
+    {
+        path: '/balance',
+        Component: Balance
     },
     {
         path: '/404',
