@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 
 
 
-const PaginationBalances = ({pages, data,  getBalances, filterParams}) => {
+const PaginationBalances = ({pages, data,  getBalance, filterParams}) => {
     
   const { t } = useTranslation();
     
