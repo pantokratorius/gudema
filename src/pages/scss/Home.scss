@@ -3,21 +3,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .text {
+        white-space: pre-wrap;
+        // test
+    }
    
 }
 
-.block1 {
+.block1 { 
     @media (max-width: 900px){
         flex-direction: column-reverse;
         margin-top: 100px;
+        justify-content: flex-start;
     }
-  
 }
 
 .block2 {
     @media (max-width: 900px){
         flex-direction: column;
         margin-top: 50px;
+        justify-content: flex-start;
     }
 }
 
