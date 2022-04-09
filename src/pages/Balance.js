@@ -31,10 +31,10 @@ const Balance = props => {console.log(props);
       e.preventDefault()
     }
 
-    const downloadOrders = () => {
+    const downloadBalance = () => {
         const link = document.createElement('a');
-        link.href = '/api/orders/orders.pdf';
-        link.setAttribute('download','api/orders/orders.pdf')
+        link.href = '/api/balance.pdf';
+        link.setAttribute('download','/api/balance.pdf')
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -43,13 +43,10 @@ const Balance = props => {console.log(props);
     return(
         <>    
             <div>
-              {props.balance ?
-                  <Order />
-                  :
-                  props.balances 
+              {props.balances 
                     ?
                     <>
-                  <Table striped bordered hover responsive="md" className={classes.balance}>
+                  <Table striped bordered hover responsive="md" className={classes.balances}>
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -77,7 +74,7 @@ const Balance = props => {console.log(props);
                       ))}
                       </tbody>
                       </Table>
-                       <Button size="sm" variant="outline-primary" style={{float: 'right', borderRadius: '20px'}} onClick={downloadOrders}>{t('download')} pdf</Button>
+                       <Button size="sm" variant="outline-primary" style={{float: 'right', borderRadius: '20px'}} onClick={downloadBalance}>{t('download')} pdf</Button>
                        <PaginationBalances
                         getBalance={props.getBalance} 
                         page={props.pageBalance} 

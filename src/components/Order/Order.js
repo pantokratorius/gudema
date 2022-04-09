@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Order.scss"
 import * as shopActions from '../../actions/shop'
 import { connect } from 'react-redux'
@@ -9,6 +9,12 @@ import { useTranslation } from "react-i18next";
 
 
 const Order = props => { 
+
+    useEffect(() => {
+          return () => {
+            props.closeOrder()
+            }
+      }, [])
 
     const { t } = useTranslation();
 

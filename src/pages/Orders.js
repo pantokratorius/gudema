@@ -20,7 +20,6 @@ const Hystory = props => {
     document.title ="Gudema Orders"
 
     useEffect (() => {
-      props.closeOrder()
         props.getOrders()   
         return () => {
             props.changeReady(false)
