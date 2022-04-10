@@ -83,6 +83,13 @@ const Header = props => {
      }
    }
     
+   const orderMenuActive = () => {
+     return ['/orders', '/balance'].includes(history.location.pathname)
+   }
+
+   const removeActive = ()=>{
+      document.querySelector('.parent').classList.remove('active');
+   }
 
     return(
       <>
@@ -91,7 +98,7 @@ const Header = props => {
                 <Link to="/home"><img src={logo} alt="logo" /></Link>
                 {props.isAuth ?
                 <ul>
-                  <li style={{position: 'relative'}}><a href="#" onClick={props.toggleOrderMenu.bind(this,!props.orderMenuOpen)} ref={ref}>{t('pages.orders')}</a>
+                  <li style={{position: 'relative'}}><a className={`parent ${orderMenuActive() && 'active'}`} href="#" onClick={props.toggleOrderMenu.bind(this,!props.orderMenuOpen)} ref={ref}>{t('pages.orders')}</a>
                   <ul className={props.orderMenuOpen ? 'slideOut' : null}>
                       <li><NavLink to="/orders" onClick={handleOrderClick.bind(this)}>Hystory</NavLink></li>
                       <li><NavLink to="/balance" onClick={handleOrderClick.bind(this)}>Balance</NavLink></li>
@@ -99,7 +106,7 @@ const Header = props => {
                   </li>
 
                   
-                  <li><NavLink to="/shop">{t('pages.shop')}</NavLink></li>
+                  <li><NavLink onClick={removeActive.bind(null)} to="/shop">{t('pages.shop')}</NavLink></li>
                 </ul>
                 : null 
                 }
