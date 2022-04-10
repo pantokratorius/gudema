@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import "./Header.scss"
 import dots from "../../images/dots.png"
 import cart from "../../images/cart.png"
@@ -34,6 +34,12 @@ const Header = props => {
     const {getCart} = props
     getCart(history)
     changeLanguage(currentLanguage)
+    document.addEventListener("click", checkIfClickedOutside)
+    document.addEventListener("click", checkIfClickedOutside2)
+    return () => {
+      document.removeEventListener("click", checkIfClickedOutside)
+      document.removeEventListener("click", checkIfClickedOutside2)
+    }
   }, [])
 
   const amount = props.cartAmount
@@ -56,9 +62,26 @@ const Header = props => {
   
     props.getContent(pathname);
     props.toggleLangs(false)
+ }
 
+ const handleOrderClick = state => {
+    props.toggleOrderMenu(false)
  }
   
+ const ref = useRef()
+ const ref2 = useRef()
+
+ const checkIfClickedOutside = e => {
+     if (ref.current && !ref.current.contains(e.target)) {
+       props.toggleOrderMenu(false)
+     }
+   }
+
+ const checkIfClickedOutside2 = e => {
+     if (ref2.current && !ref2.current.contains(e.target)) {
+      props.toggleLangs(false)
+     }
+   }
     
 
     return(
@@ -68,13 +91,10 @@ const Header = props => {
                 <Link to="/home"><img src={logo} alt="logo" /></Link>
                 {props.isAuth ?
                 <ul>
-                  <li><NavLink to="/orders">{t('pages.orders')}</NavLink></li>
-
-
-                  <li style={{position: 'relative'}}><a href="#" onClick={props.toggleLangs.bind(this,!props.langsOpen)}>{t('pages.orders')}</a>
-                  <ul className={props.langsOpen ? 'slideOut' : null}>
-                      <li><NavLink to="/orders" onClick={null}>Hystory</NavLink></li>
-                      <li><NavLink to="/balance" onClick={null}>Balance</NavLink></li>
+                  <li style={{position: 'relative'}}><a href="#" onClick={props.toggleOrderMenu.bind(this,!props.orderMenuOpen)} ref={ref}>{t('pages.orders')}</a>
+                  <ul className={props.orderMenuOpen ? 'slideOut' : null}>
+                      <li><NavLink to="/orders" onClick={handleOrderClick.bind(this)}>Hystory</NavLink></li>
+                      <li><NavLink to="/balance" onClick={handleOrderClick.bind(this)}>Balance</NavLink></li>
                   </ul>
                   </li>
 
@@ -95,7 +115,7 @@ const Header = props => {
             <ul className="links">
                 <li className="dots"><a onClick={props.toggleMenu} href='#'><img src={dots} alt="" /></a></li>
                 <li id="login"><a onClick={props.authFormToggle} href="#">{props.isAuth ? props.authUsername : t('logIn')}</a></li>
-                <li style={{position: 'relative', textTransform: 'uppercase', fontSize: '13px'}}><a href="#" onClick={props.toggleLangs.bind(this,!props.langsOpen)}>{currentLanguage}</a>
+                <li style={{position: 'relative', textTransform: 'uppercase', fontSize: '13px'}}><a href="#" onClick={props.toggleLangs.bind(this,!props.langsOpen)} ref={ref2}>{currentLanguage}</a>
                   <ul className={props.langsOpen ? 'slideOut' : null}>
                     {langs.map((lang, i)=> {
                       if(lang != currentLanguage)
@@ -146,6 +166,7 @@ const mapStateToProps = state => ({
   authUsername: state.auth.authUsername,
   menuIsOpen: state.header.menuIsOpen,
   langsOpen: state.header.langsOpen,
+  orderMenuOpen: state.header.orderMenuOpen,
   headerReady: state.header.headerReady
 });
   

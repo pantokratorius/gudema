@@ -1,6 +1,7 @@
 const initialState = {
     formIsOpen: false,
     menuIsOpen: false,
+    orderMenuOpen: false,
     langsOpen: false,
     langsOpenMobile: false,
     timer: null,
@@ -30,6 +31,11 @@ const initialState = {
         return {
             ...state,
             langsOpen: action.payload,
+        };
+      case "ORDER_MENU_TOGGLE":
+        return {
+            ...state,
+            orderMenuOpen: action.payload,
         };
       case "LANGS_MOBILE_TOGGLE":
         return {

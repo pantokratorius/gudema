@@ -41,14 +41,21 @@ export const toggleLangsMobile = st => (
 export const toggleLangs = st => (
      dispatch => {
     if(st === true){
-      let timer = null
       dispatch(openLangs())
-      timer = setTimeout(()=>dispatch(closeLangs()),4000)
-      dispatch(saveTimer(timer))
     }
     else{
-      dispatch(removeTimer())
       dispatch(closeLangs())
+    }
+  }
+)
+
+export const toggleOrderMenu = st => (
+     dispatch => {
+    if(st === true){
+      dispatch(openOrderMenu())
+    }
+    else{
+      dispatch(closeOrderMenu())
     }
   }
 )
@@ -84,6 +91,20 @@ export const openLangs = () => (
 export const closeLangs = () => (
   {
     type: 'LANGS_TOGGLE',
+    payload: false
+  }
+)
+
+export const openOrderMenu = () => (
+  {
+    type: 'ORDER_MENU_TOGGLE',
+    payload: true
+  }
+)
+
+export const closeOrderMenu = () => (
+  {
+    type: 'ORDER_MENU_TOGGLE',
     payload: false
   }
 )
