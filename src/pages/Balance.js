@@ -6,10 +6,9 @@ import * as shopActions from '../actions/shop'
 import { bindActionCreators } from 'redux';
 import { Button, Table } from "react-bootstrap";
 import classes from './scss/Balance.module.scss'
-import Order from "../components/Order/Order";
 import moment from "moment"
 import { useTranslation } from "react-i18next";
-import PaginationBalances from "../components/Shop/PaginationBalances/PaginationBalances";
+import Order from "../components/Order/Order";
 
 
 
@@ -43,7 +42,10 @@ const Balance = props => {console.log(props);
     return(
         <>    
             <div>
-              {props.balances 
+              {props.order ?
+                  <Order />
+                  :
+                  props.balances 
                     ?
                     <>
                   <Table striped bordered hover responsive="md" className={classes.balances}>
@@ -61,7 +63,7 @@ const Balance = props => {console.log(props);
                     </thead>
                     <tbody>
                         {props.balances.map((item, i)=>(
-                            <tr key={i}  className={classes.hover}>
+                            <tr key={i} onClick={props.getOrder.bind(this, item.id, item.invoiceLink)}  className={classes.hover}>
                                 <td style={{textAlign:'center'}}>{item.id}</td>
                                 <td>{!item.invoiceLink ? item.invoiceNo : <a href={item.invoiceLink}  onClick={returnFalse}>{item.invoiceNo}</a>}</td>
                                 <td>{item.invoiceDate && moment(item.invoiceDate).format("YYYY-MM-DD")}</td>
@@ -75,15 +77,6 @@ const Balance = props => {console.log(props);
                       </tbody>
                       </Table>
                        <Button size="sm" variant="outline-primary" style={{float: 'right', borderRadius: '20px'}} onClick={downloadBalance}>{t('download')} pdf</Button>
-                       <PaginationBalances
-                        getBalance={props.getBalance} 
-                        page={props.pageBalance} 
-                        pages={props.pagesBalance} 
-                        data={props.balances} 
-                        setPages={props.setPagesBalance} 
-                        filterParams={props.filterParamsBalance}
-                        setLimitOffset={props.setLimitOffsetBalance}  
-                      />
                        </>
                       :
                       null
@@ -104,12 +97,8 @@ const Balance = props => {console.log(props);
   
 const mapStateToProps = state => ({ 
     balances: state.shop.balances,
-    balance: state.shop.balance,
     isReady: state.shop.isReady,
-    perPageBalance: state.shop.perPageBalance,
-    pageBalance: state.shop.pageBalance,
-    itemsTotalBalance: state.shop.itemsTotalBalance,
-    filterParamsBalance: state.shop.filterParamsBalance,
+    order: state.shop.order,
 });
   
   const mapDispatchToProps = dispatch => ({

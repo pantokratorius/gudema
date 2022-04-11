@@ -7,7 +7,7 @@
   "cart": "Krepšelis tuščias",
   "confirmOrder": "Tvirtinti užsakymą",
   "back": "atgal į parduotuvę",
-  "backorder": "Atgal prie užsakymų",
+  "backorder": "Atgal",
   "changeDate": "Keisti data?",
   "download": "Parsisiųsti",
   "deliveryDate": "Pristatymo data",
@@ -18,7 +18,9 @@
       "aboutUs" : "Apie mus",
       "contacts" : "Kontaktai",
       "shop" : "Parduotuvė",
-      "orders" : "Užsakymai"
+      "orders" : "Užsakymai",
+      "balance" : "Balansas",
+      "hystory" : "Istorija"
     },
     "filters" : {
       "color" : "Spalva",

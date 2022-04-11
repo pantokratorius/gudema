@@ -194,11 +194,6 @@ export const setPagesOrder = pages => ({
   payload: pages
 });
 
-export const setPagesBalance = pages => ({
-  type: 'SET_PAGES_BALANCE',
-  payload: pages
-});
-
 export const setItemsTotal = num => ({
   type: 'SET_ITEMS_TOTAL',
   payload: num
@@ -322,6 +317,7 @@ export const setLimitOffsetOrder = (e) => {
   }
 
 }
+
 
 export const changeReady = param => {
   return {
@@ -502,28 +498,18 @@ export const getOrders = (obj = {}, el = false) => (
 
 
 
-export const getBalance = (obj = {}, el = false) => (
+export const getBalance = () => (
   async dispatch => {
-console.log('getBalance');
     const url = '/api/balance'
 
     try {
-      const response = await axios.get(url, {
-        params: {
-          ...obj
-        }
-      })
+      const response = await axios.get(url)
       const data = response.data
-      console.log(data.orders);
       await dispatch(setBalance(data.orders))
-      await dispatch(setItemsTotalBalance(data.totalElements))
-      await dispatch(setPagesBalance(data.totalPages))
-      await dispatch(setFilterParamsBalance(obj))
       window.scrollTo({
         top: 0,
         behavior: 'smooth'
       });
-      if (el) await el.click()
     } catch (err) {
       console.error(err)
     }
@@ -536,18 +522,8 @@ export const setFilterParamsOrder = obj => ({
   payload: obj
 })
 
-export const setFilterParamsBalance = obj => ({
-  type: "SET_FILTER_PARAMS_BALANCE",
-  payload: obj
-})
-
 
 export const setItemsTotalOrder = num => ({
-  type: 'SET_ITEMS_TOTAL',
-  payload: num
-});
-
-export const setItemsTotalBalance = num => ({
   type: 'SET_ITEMS_TOTAL',
   payload: num
 });

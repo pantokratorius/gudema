@@ -5,7 +5,7 @@
   "order": "Add to cart",
   "ordered": "Ordered",
   "back": "back to shop",
-  "backorder": "Back to orders",
+  "backorder": "Back",
   "cart": "Cart is empty",
   "confirmOrder": "Confirm order",
   "changeDate": "Change date?",
@@ -18,7 +18,9 @@
       "aboutUs" : "About us",
       "contacts" : "Contacts",
       "shop" : "E-shop",
-      "orders" : "Orders"
+      "orders" : "Orders",
+      "balance" : "Balance",
+      "hystory" : "Hystory"
     },
     "filters" : {
       "color" : "Color",

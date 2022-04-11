@@ -6,7 +6,7 @@
   "ordered": "Tilattu",
   "confirmOrder": "Vahvista tilaus",
   "back": "takaisin kauppaan",
-  "backorder": "Takaisin tilauksiin",
+  "backorder": "Takaisin",
   "cart": "Kärry on tyhjä",
   "changeDate": "Muuta päivämäärää?",
   "download": "Ladata",
@@ -18,7 +18,9 @@
       "aboutUs" : "Meistä",
       "contacts" : "Yhteystiedot",
       "shop" : "Verkkokauppa",
-      "orders" : "Tilauksia"
+      "orders" : "Tilauksia",
+      "balance" : "Saldo",
+      "hystory" : "Historia"
     },
     "filters" : {
       "color" : "Väri",

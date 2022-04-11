@@ -13,7 +13,7 @@ import PaginationOrders from "../components/Shop/PaginationOrders/PaginationOrde
 
 
 
-const Hystory = props => {
+const Hystory = props => {console.log(props.order);
 
   const { t } = useTranslation() 
     
@@ -83,7 +83,6 @@ const Hystory = props => {
                         pages={props.pagesOrder} 
                         data={props.orders} 
                         setPages={props.setPagesOrder} 
-                        setPages={props.setPageOrder} 
                         filterParams={props.filterParamsOrder}
                         setLimitOffset={props.setLimitOffsetOrder}  
                       />

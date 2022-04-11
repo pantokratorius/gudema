@@ -5,7 +5,7 @@
   "order": "В корзину",
   "ordered": "Заказано",
   "back": "назад в магазин",
-  "backorder": "Назад к заказам",
+  "backorder": "Назад",
   "cart": "Корзина пустая",
   "confirmOrder": "Подтвертить заказ",
   "changeDate": "Изменить дату?",
@@ -18,7 +18,9 @@
       "aboutUs" : "О нас",
       "contacts" : "Контакты",
       "shop" : "Магазин",
-      "orders" : "Заказы"
+      "orders" : "Заказы",
+      "balance" : "Баланс",
+      "hystory" : "История"
     },
     "filters" : {
       "color" : "Цвет",

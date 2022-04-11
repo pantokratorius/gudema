@@ -6,16 +6,16 @@ import { useTranslation } from "react-i18next";
 
 
 
-const PaginationBalances = ({pages, data,  getBalance, filterParams}) => {
+const PaginationBalances = ({pagesBalance, data,  getBalance, filterParamsBalance}) => {console.log(pagesBalance);
     
   const { t } = useTranslation();
     
    const pageHandler = event => {
-    getBalance( {...filterParams, page: event.selected}  )
+    getBalance( {...filterParamsBalance, page: event.selected}  )
     }
     
     const onChangeHandleBalance = (data,e) => {
-        getBalance( {...filterParams, size: e.target.value}, document.querySelector('.pageNum li:nth-child(2) a') )
+        getBalance( {...filterParamsBalance, size: e.target.value}, document.querySelector('.pageNum li:nth-child(2) a') )
         
        }
   
@@ -24,11 +24,11 @@ const PaginationBalances = ({pages, data,  getBalance, filterParams}) => {
         <div className="pagination">
         <div></div>
         {
-        pages > 1
+        pagesBalance > 1
             ? <ReactPaginate 
-                previousLabel={'‹'}
+                previousLabel={'‹'} 
                 nextLabel={'›'}
-                pageCount={pages}
+                pageCount={pagesBalance}
                 marginPagesDisplayed={2}
                 onPageChange={pageHandler}
                 containerClassName={'pageNum'}

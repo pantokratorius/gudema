@@ -100,8 +100,8 @@ const Header = props => {
                 <ul>
                   <li style={{position: 'relative'}}><a className={`parent ${orderMenuActive() && 'active'}`} href="#" onClick={props.toggleOrderMenu.bind(this,!props.orderMenuOpen)} ref={ref}>{t('pages.orders')}</a>
                   <ul className={props.orderMenuOpen ? 'slideOut' : null}>
-                      <li><NavLink to="/orders" onClick={handleOrderClick.bind(this)}>Hystory</NavLink></li>
-                      <li><NavLink to="/balance" onClick={handleOrderClick.bind(this)}>Balance</NavLink></li>
+                      <li><NavLink to="/orders" onClick={handleOrderClick.bind(this)}>{t('pages.hystory')}</NavLink></li>
+                      <li><NavLink to="/balance" onClick={handleOrderClick.bind(this)}>{t('pages.balance')}</NavLink></li>
                   </ul>
                   </li>
 

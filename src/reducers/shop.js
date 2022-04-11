@@ -26,14 +26,8 @@ const initialState = {
     pagesOrder: 0,
     itemsTotalOrder: 0,
     filterParamsOrder: {},
-
+    
     balances: [],
-    balance: null,
-    perPageBalance: 20,
-    pageBalance: 0,
-    pagesBalance: 0,
-    itemsTotalBalance: 0,
-    filterParamsBalance: {},
 
     notification: null,
   };
@@ -77,11 +71,6 @@ const initialState = {
           order: [action.payload[0], action.payload[1]]
         };
 
-      case "SET_BALANCE":
-        return {
-          ...state,
-          balance: [action.payload[0], action.payload[1]]
-        };
 
       case "CLOSE_ORDER":
         return {
@@ -141,11 +130,6 @@ const initialState = {
         return {
           ...state,
           pagesOrder: action.payload,
-        };
-      case "SET_PAGES_BALANCE":
-        return {
-          ...state,
-          pagesBalance: action.payload,
         };
       case "SET_ITEMS_TOTAL":
         return {
@@ -251,11 +235,6 @@ const initialState = {
             return {
               ...state,
               filterParamsOrder: action.payload,
-            };
-          case "SET_FILTER_PARAMS_BALANCE": 
-            return {
-              ...state,
-              filterParamsBalance: action.payload,
             };
           case "SET_GROUPS":
             return {
