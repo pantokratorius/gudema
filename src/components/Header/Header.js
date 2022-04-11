@@ -66,6 +66,7 @@ const Header = props => {
 
  const handleOrderClick = state => {
     props.toggleOrderMenu(false)
+    props.order && props.closeOrder()
  }
   
  const ref = useRef()
@@ -89,6 +90,7 @@ const Header = props => {
 
    const removeActive = ()=>{
       document.querySelector('.parent').classList.remove('active');
+      
    }
 
     return(
@@ -174,6 +176,7 @@ const mapStateToProps = state => ({
   menuIsOpen: state.header.menuIsOpen,
   langsOpen: state.header.langsOpen,
   orderMenuOpen: state.header.orderMenuOpen,
+  order: state.shop.order,
   headerReady: state.header.headerReady
 });
   

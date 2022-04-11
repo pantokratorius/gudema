@@ -13,7 +13,7 @@ import PaginationOrders from "../components/Shop/PaginationOrders/PaginationOrde
 
 
 
-const Hystory = props => {console.log(props.order);
+const Hystory = props => {
 
   const { t } = useTranslation() 
     

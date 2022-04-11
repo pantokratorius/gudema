@@ -31,7 +31,7 @@ const Order = props => {
     return(
         <div style={{marginTop:'70px'}}>
             
-            <Button style={{borderRadius: '20px'}} size="sm" variant="outline-primary" onClick={props.closeOrder.bind(this)}>{t('backorder')}</Button>
+            <span style={{color: '#0d6efd'}}>&larr;</span> <span style={{color: '#0d6efd', cursor: 'pointer', textDecoration: 'underline'}} onClick={props.closeOrder.bind(this)}>{t('backorder')}</span>
             <Table className="order" striped bordered hover responsive="md" style={{marginTop: "20px"}}>
                 <thead>
                     <tr>
@@ -56,7 +56,7 @@ const Order = props => {
                     ))}
                 </tbody>
             </Table>
-            <Button style={{borderRadius: '20px'}} size="sm" variant="outline-primary" onClick={props.closeOrder.bind(this)}>{t('backorder')}</Button>
+            <span style={{color: '#0d6efd'}}>&larr;</span> <span style={{color: '#0d6efd', cursor: 'pointer', textDecoration: 'underline'}} onClick={props.closeOrder.bind(this)}>{t('backorder')}</span>
             {props.order[1] ?
                 <Button size="sm" variant="outline-primary" style={{float: 'right', borderRadius: '20px'}} onClick={downloadPdf}>{t('download')} pdf</Button>
                 : null 
