@@ -12,6 +12,8 @@
   "download": "Download",
   "deliveryDate": "Delivery date",
   "orderInHolland": "Order in Holland department",
+  "clientBalance" : "User balance",
+  "orderHistory" : "Orders history",
   "comment" : "Comment",
   "save" : "Save",
     "pages" : {

@@ -49,7 +49,7 @@ const Hystory = props => {
                   props.orders 
                     ?
                     <>
-                    <h4 className={classes.orders}>Užsakymų istorija</h4>
+                    <h4 className={classes.orders}>{t('orderHistory')}</h4>
                   <Table striped bordered hover responsive="md">
                     <thead>
                         <tr>

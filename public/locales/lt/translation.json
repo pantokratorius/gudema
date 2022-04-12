@@ -12,6 +12,8 @@
   "download": "Parsisiųsti",
   "deliveryDate": "Pristatymo data",
   "orderInHolland": "Užsisakykite Niderlandų skyriuje",
+  "clientBalance" : "Kliento balansas",
+  "orderHistory" : "Užsakymų istorija",
   "comment" : "Komentaras",
   "save" : "Išsaugoti",
     "pages" : {

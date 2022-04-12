@@ -12,6 +12,8 @@
   "download": "Ladata",
   "deliveryDate": "Toimituspäivä",
   "orderInHolland": "Order in Holland department",
+  "clientBalance" : "Käyttäjän saldo",
+  "orderHistory" : "Tilausten historia",
   "comment" : "Kommentti",
   "save" : "Tallentaa",
     "pages" : {

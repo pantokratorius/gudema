@@ -12,6 +12,8 @@
   "download": "Скачать",
   "deliveryDate": "Дата доставки",
   "orderInHolland": "Заказывайте в отделении Ниддерландов",
+  "clientBalance" : "Баланс пользователя",
+  "orderHistory" : "История заказов",
   "comment" : "Комментарий",
   "save" : "Сохранить",
     "pages" : {

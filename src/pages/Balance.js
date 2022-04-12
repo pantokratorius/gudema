@@ -51,7 +51,7 @@ const Balance = props => {
                   props.balances.orders 
                     ?
                     <>
-                    <h4 className={classes.balances}>Kliento balansas</h4>
+                    <h4 className={classes.balances}>{t('clientBalance')}</h4>
                   <Table striped bordered hover responsive="md" >
                     <thead>
                         <tr>
