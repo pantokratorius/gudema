@@ -37,6 +37,9 @@
       "supplier" : "Tiekėjas",
       "totalAmount" : "Bendras kiekis",
       "totalSumm" : "Suma",
+      "paidSumm" : "Apmokėta suma",
+      "total" : "Viso",
+      "balance" : "Balansas",
       "quantity" : "Kiekis",
       "name" : "Pavadinimas"
     },

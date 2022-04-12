@@ -505,7 +505,7 @@ export const getBalance = () => (
     try {
       const response = await axios.get(url)
       const data = response.data
-      await dispatch(setBalance(data.orders))
+      await dispatch(setBalance(data))
       window.scrollTo({
         top: 0,
         behavior: 'smooth'

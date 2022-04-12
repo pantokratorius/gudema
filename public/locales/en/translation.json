@@ -36,7 +36,10 @@
       "price" : "Price",
       "supplier" : "Supplier",
       "totalAmount" : "Total amount",
+      "total" : "Total",
       "totalSumm" : "Sum",
+      "paidSumm" : "Paid sum",
+      "balance" : "Saldo",
       "quantity" : "Quantity",
       "name" : "Name"
     },

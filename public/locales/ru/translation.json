@@ -37,6 +37,9 @@
       "supplier" : "Поставщик",
       "totalAmount" : "Всего",
       "totalSumm" : "Сумма",
+      "paidSumm" : "Оплачено",
+      "total" : "Итого",
+      "balance": "Сальдо",
       "quantity" : "Количество",
       "name" : "Название"
     },

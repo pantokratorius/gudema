@@ -10,6 +10,7 @@ import Order from "../components/Order/Order";
 import moment from "moment"
 import { useTranslation } from "react-i18next";
 import PaginationOrders from "../components/Shop/PaginationOrders/PaginationOrders";
+import formatPrice from "../helpers/formatPrice";
 
 
 
@@ -48,10 +49,11 @@ const Hystory = props => {
                   props.orders 
                     ?
                     <>
-                  <Table striped bordered hover responsive="md" className={classes.orders}>
+                    <h4 className={classes.orders}>Užsakymų istorija</h4>
+                  <Table striped bordered hover responsive="md">
                     <thead>
                         <tr>
-                            <th>ID</th>
+                            <th style={{textAlign:'center'}}>ID</th>
                             <th>No</th>
                             <th>{t('orders.date')}</th>
                             <th>{t('orders.paymentDate')}</th>
@@ -71,7 +73,7 @@ const Hystory = props => {
                                 <td>{t(`paymentStatus.${item.paidStatus}`)}</td>
                                 <td>{item.plannedDeliveryDate && moment(item.plannedDeliveryDate).format("YYYY-MM-DD")}</td>
                                 <td>{t(`status.${item.status}`)}</td>
-                                <td>{item.totalSum && item.totalSum.toFixed(2)}</td>
+                                <td>{item.totalSum && formatPrice(item.totalSum)}</td>
                             </tr>
                       ))}
                       </tbody>

@@ -37,6 +37,9 @@
       "supplier" : "Toimittaja",
       "totalAmount" : "Kokonaismäärä",
       "totalSumm" : "Summa",
+      "total" : "Totaalinen",
+      "paidSumm" : "Maksettu summa",
+      "balance" : "Saldo",
       "quantity" : "Määrä",
       "name" : "Nimi"
     },

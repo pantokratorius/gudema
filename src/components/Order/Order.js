@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux';
 import { Button, Table } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
+import formatPrice from "../../helpers/formatPrice";
 
 
 
@@ -50,8 +51,8 @@ const Order = props => {
                         <td>{item.product.height}</td>
                         <td>{item.product.color}</td>
                         <td>{item.unitsQuantity}</td>
-                        <td>{item.unitPrice.toFixed(2)}</td>
-                        <td>{item.totalPrice.toFixed(2)}</td>
+                        <td>{formatPrice(item.unitPrice)}</td>
+                        <td>{formatPrice(item.totalPrice)}</td>
                     </tr>
                     ))}
                 </tbody>
