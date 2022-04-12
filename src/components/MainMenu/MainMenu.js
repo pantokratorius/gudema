@@ -40,7 +40,10 @@ import axios from "axios";
                             <li><NavLink to="/about">{t('pages.aboutUs')}</NavLink></li>
                             {/* <li><NavLink to="/contacts">{t('pages.contacts')}</NavLink></li> */}
                             {props.isAuth &&
-                              <li><NavLink to="/orders">{t('pages.orders')}</NavLink></li>
+                              <>
+                                <li><NavLink to="/orders">{t('pages.hystory')}</NavLink></li>
+                                <li><NavLink to="/balance">{t('pages.balance')}</NavLink></li>
+                              </>
                             }
                             <li className="langs_m"><a href="#" data-type='currentLang' onClick={props.toggleLangsMobile.bind(this,!props.langsOpenMobile)}>{currentLanguage}</a>
                             <span className={`arrow  ${props.langsOpenMobile && 'rotated'}`} >&lsaquo;</span>

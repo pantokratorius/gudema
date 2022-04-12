@@ -12,7 +12,7 @@ import Order from "../components/Order/Order";
 
 
 
-const Balance = props => {
+const Balance = props => { 
 
   const { t } = useTranslation() 
     
