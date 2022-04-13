@@ -51,8 +51,8 @@ const Order = props => {
                         <td>{item.product.height}</td>
                         <td>{item.product.color}</td>
                         <td>{item.unitsQuantity}</td>
-                        <td>{formatPrice(item.unitPrice)}</td>
-                        <td>{formatPrice(item.totalPrice)}</td>
+                        <td>{item.unitPrice && formatPrice(item.unitPrice)}</td>
+                        <td>{item.totalPrice && formatPrice(item.totalPrice)}</td>
                     </tr>
                     ))}
                 </tbody>

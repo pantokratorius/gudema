@@ -71,9 +71,9 @@ const Balance = props => {
                                 <td>{item.invoiceDate && moment(item.invoiceDate).format("YYYY-MM-DD")}</td>
                                 <td>{item.invoicePaymentDate && moment(item.invoicePaymentDate).format("YYYY-MM-DD")}</td>
                                 <td>{t(`paymentStatus.${item.paidStatus}`)}</td>
-                                <td>{formatPrice(item.totalSum)}</td>
+                                <td>{item.totalSum && formatPrice(item.totalSum)}</td>
                                 <td>{item.paidedAmount && formatPrice(item.paidedAmount)}</td>
-                                <td>{formatPrice(item.balance)}</td>
+                                <td>{item.balance && formatPrice(item.balance)}</td>
                             </tr>
                       ))}
                          <tr>
@@ -81,9 +81,9 @@ const Balance = props => {
                             <td></td>
                             <td></td>
                             <td style={{textAlign:"right"}}><b>{t('params.total')}:</b></td>
-                            <td>{formatPrice(props.balances.totalSum)}</td>
-                            <td>{formatPrice(props.balances.totalPaidSum)}</td>
-                            <td><b>{formatPrice(props.balances.balance)}</b></td>
+                            <td>{props.balances.totalSum && formatPrice(props.balances.totalSum)}</td>
+                            <td>{props.balances.totalPaidSum && formatPrice(props.balances.totalPaidSum)}</td>
+                            <td><b>{props.balances.balance && formatPrice(props.balances.balance)}</b></td>
                         </tr>
                       </tbody>
                       </Table>
