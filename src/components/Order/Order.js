@@ -47,7 +47,7 @@ const Order = props => {
                 <tbody>
                     {props.order[0].map((item,i)=>(
                     <tr key={i}>
-                        <td>{item.product.name}</td>
+                        <td>{item.product.fullName}</td>
                         <td>{item.product.height}</td>
                         <td>{item.product.color}</td>
                         <td>{item.unitsQuantity}</td>

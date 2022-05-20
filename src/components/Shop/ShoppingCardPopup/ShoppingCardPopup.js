@@ -70,7 +70,7 @@ const ShoppingCardPopup = props => {
                     }
                     <Card.Body>
                     <div className="title-wrap mb-4">
-                        <Card.Title>{props.name}</Card.Title>
+                        <Card.Title>{props.fullName}</Card.Title>
                         <Card.Subtitle>{t('params.supplier')}: {props.grower}</Card.Subtitle>
                     </div>   
                     <div>

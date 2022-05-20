@@ -48,7 +48,7 @@ const setCursor = e => {
                 
                 <div className="info">
                     <ul>
-                        <li>{item.name}</li>
+                        <li>{item.fullName}</li>
                         <li style={{overflow: 'hidden'}}>{item.grower}</li>
                         
                     </ul>

@@ -65,7 +65,7 @@ const ShopingCard = fl => {
         <CardGroup className="shopping-cart">
             <Card>
                 <div className="title-wrap mb-4" onClick={fl.showCard.bind(this,fl)}>
-                    <Card.Subtitle>{fl.name}</Card.Subtitle>   
+                    <Card.Subtitle>{fl.fullName}</Card.Subtitle>   
                     <Card.Subtitle style={{whiteSpace: 'nowrap'}}>{fl.variations[0] && fl.variations[0].unitPrice.toFixed(2)} €</Card.Subtitle>
                  </div>   
                 <Card.Img variant="top" src={fl.photoLink}  onClick={fl.showCard.bind(this,fl)} />
