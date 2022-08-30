@@ -7,7 +7,7 @@ const initialState = {
       case "FILTER_UNIQ":
         return {
           ...state,
-          items: Object.values(state.items.map((item)=> state.items[item.id] = item)),
+          items: [...new Map(state.items.map((item) => [item["id"], item])).values()],
           isReady: true
         };
       case "SET_FLOWERS":
