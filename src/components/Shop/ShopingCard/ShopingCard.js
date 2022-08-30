@@ -74,7 +74,7 @@ const ShopingCard = fl => {
                 : null
                 }
                 <Card.Body>
-                    <Card.Text style={{textAlign:'left', height: '40px', overflow:'hidden'}}>{t('params.supplier')}: {fl.grower}</Card.Text>
+                    <Card.Text className="text_supplier" style={{}}>{t('params.supplier')}: {fl.grower}</Card.Text>
                     <Card.Text><span>{t('params.length')}:</span> {fl.height}</Card.Text>
                     <Card.Text><span>{t('params.amount')}:</span> {fl.quantity}</Card.Text>
                     <Card.Text><span>{t('params.quality')}:</span> {fl.quality}</Card.Text>

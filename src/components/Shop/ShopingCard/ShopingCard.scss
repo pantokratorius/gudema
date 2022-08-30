@@ -275,8 +275,19 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            
+            .text_supplier {
+                text-align: left;
+                height: 40px;
+                overflow: hidden;
+
+                @media (max-width: 600px){
+                    height: auto;
+                }
+
+            }
+            
         }
-       
     
         
     }
