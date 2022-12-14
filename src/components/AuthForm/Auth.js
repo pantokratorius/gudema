@@ -61,7 +61,7 @@ import { useTranslation } from "react-i18next";
                                 <li><b>Decorations</b></li>
                               </ul>
                             </Card.Text>
-                            <Card.Link href="https://shop.floraplaza.nl/floraplaza/en/EUR/login" target="_blank">Floraplaza</Card.Link>
+                            <Card.Link href="https://shop.floraplaza.nl/floraplaza/en/EUR/login?store=34356" target="_blank">Floraplaza</Card.Link>
                             {/* <Card.Link href="https://www.xlflor.com/en/homexl" target="_blank" style={{marginTop: '10px'}}>Xlflor</Card.Link> */}
                         </Card.Body>
                     </Card>

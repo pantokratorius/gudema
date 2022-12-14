@@ -115,7 +115,7 @@ const Header = props => {
             </div>
             <ul className="outerLinks">
               <li>
-                  <a href="https://shop.floraplaza.nl/floraplaza/en/EUR/login" target="_blank">Floraplaza</a>
+                  <a href="https://shop.floraplaza.nl/floraplaza/en/EUR/login?store=34356" target="_blank">Floraplaza</a>
                 </li>
               {/* <li>
                 <a href="https://www.xlflor.com/en/homexl" target="_blank">Xlflor</a>
