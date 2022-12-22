@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .carousel-indicators {
     bottom: -85px;
 
@@ -27,6 +29,26 @@
 
 .heroText {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    h2{
+        font-size: 100px;
+        line-height: 100px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    p {
+        font-size: 40px;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    a{
+        color: $textcolor;
+    }
+
+
 }

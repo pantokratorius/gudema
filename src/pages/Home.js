@@ -6,6 +6,7 @@ import Preloader from "../components/Preloader/Preloader";
 import './scss/Home.scss'
 import * as shopActions from './../actions/shop'
 import { bindActionCreators } from 'redux';
+import HowWeWork from "../components/HowWeWork/HowWeWork";
 
 const Home = props => {
     
@@ -26,6 +27,7 @@ const Home = props => {
             : 
             <CarouselComponent images={props.content ? props.content : null} />
             }
+            <HowWeWork />
             <div>
               {!props.isReady ?
                   <Preloader />

@@ -5,6 +5,7 @@ import * as headerActions from '../../actions/header'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux';
 import { useTranslation } from "react-i18next";
+import logo from '../../images/logoFooter.png'
 
 
 
@@ -26,21 +27,25 @@ const Footer = props => {
         }
             <div className="wrap">
                 <div>
-                    <h3 style={{height: '30px', display: 'flex', alignItems: 'flex-end'}}>Gudema</h3>
-                    <p>{/*props.requisites && props.requisites.address*/}</p>
+                    <h3><img src={logo}/></h3>
+                    <p style={{maxWidth:'250px'}}>{props.requisites && props.requisites.address}</p>
                 </div>
-                <div>
-                    <h5 style={{height: '30px', display: 'flex', alignItems: 'flex-end'}}><a href={`tel:${props.requisites && props.requisites.phone}`}>{props.requisites && props.requisites.phone}</a></h5>
-                    <p><a href={`mailto:${props.requisites && props.requisites.email}`}>{props.requisites && props.requisites.email}</a></p>
+                <div className="phoneMail">
+                    <h5 >
+                      <a href={`tel:${props.requisites && props.requisites.phone}`}>{props.requisites && props.requisites.phone}</a>
+                    </h5>
+                    <h5 >
+                      <a href={`tel:${props.requisites && props.requisites.phone}`}>{props.requisites && props.requisites.phone}</a>
+                    </h5>
+                    <p style={{margin: 'auto 0 0'}}><a href={`mailto:${props.requisites && props.requisites.email}`}>{props.requisites && props.requisites.email}</a></p>
                 </div>
            </div>
            <div className="wrap2">
                 <div>
-                    {/* <h5><Link to='./about'>{t('pages.aboutUs')}</Link></h5> */}
+                    {<h5><Link to='./shop'>{t('pages.shop')}</Link></h5>}
                 </div>
                 <div>
-                <h5 style={{height: '30px', display: 'flex', alignItems: 'flex-end'}}><Link to='./about'>{t('pages.aboutUs')}</Link></h5>
-                        {/* <h5><Link to='./contacts'>{t('pages.contacts')}</Link></h5> */}
+                  <h5><Link to='./about'>{t('pages.aboutUs')}</Link></h5>
                 </div>
            </div>
         </div>

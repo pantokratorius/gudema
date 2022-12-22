@@ -13,8 +13,8 @@ const CarouselComponent = props => {
     return(
         props.images && props.images.map((block, index)=>(
           block.type == "slideBox" ?
-          <>
-          <Carousel controls={false} indicators={block.data.images && block.data.images.length < 2 ? false : true} key={index}>
+          <React.Fragment key={index}>
+          <Carousel controls={false} indicators={block.data.images && block.data.images.length < 2 ? false : true} >
           {block.data.images && block.data.images.map((image, i)=>(
              <Carousel.Item key={i}>
              <img
@@ -22,14 +22,14 @@ const CarouselComponent = props => {
              src={image.imageLink}
              alt="Slides"
              />
+            <div  className="heroText">
+                      <h2>Don‘t miss our spring offers</h2>
+                      <p>browse all offers <a href="#">here</a></p>
+                    </div>
          </Carousel.Item>
           ))}
         </Carousel>
-          <div className="heroText">
-            <h2>Don‘t miss our spring offers</h2>
-            <p>browse all offers <a href="#">here</a></p>
-          </div>
-          </>
+          </React.Fragment>
         : null
         ))
     )

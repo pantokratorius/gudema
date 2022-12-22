@@ -1,0 +1,44 @@
+.box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: 150px auto 0;
+    border-bottom: 6px solid #ebeefc;
+    
+    
+     div {
+        font-size: 50px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img:nth-child(2) {
+            width: 50px;
+            margin-bottom: -28px;
+        }
+        
+        img:last-child {
+            position: absolute;
+            bottom: -30%;
+            left: -100%;
+            width: 80px;
+        }
+        
+                &:first-child img:last-child {
+                    left: -50%;
+                    width: 50px;
+                }
+
+    }
+
+    
+}
+
+.text{
+    text-align: center;
+    font-size: 31px;
+    font-weight: bold;
+    margin: 50px auto 180px;
+}

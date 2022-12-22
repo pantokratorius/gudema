@@ -5,6 +5,16 @@
     align-items: flex-start;
     position: relative;
 
+    .phoneMail {
+        width: 175px !important;
+        padding-top: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+
+
     @media (max-width: 900px){
         margin-top: 100px;
     }
@@ -24,11 +34,12 @@
 
     .wrap, .wrap2 {
         display: flex;       
-        align-items: flex-start;
+        align-items: stretch;
     }
 
     div div p {
         margin-top: 50px;
+        margin-bottom: 0;
 
 
         @media (max-width: 700px){
