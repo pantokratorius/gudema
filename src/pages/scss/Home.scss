@@ -4,10 +4,10 @@
     justify-content: space-between;
     align-items: center;
 
-    .text {
-        white-space: pre-wrap;
-        // test
-    }
+    // .text {
+    //     white-space: pre-wrap;
+    //     // test
+    // }
    
 }
 
@@ -28,12 +28,13 @@
     }
  
     .text {
-        padding: 100px;
+        padding: 70px;
         text-align: left;
         box-sizing: border-box;
         line-height: 51px;
         font-size: 23px;
         font-weight: bold;
+        width: 50%;
     }
         background: #f7f7f7;
 
