@@ -28,7 +28,7 @@ const Footer = props => {
             <div className="wrap">
                 <div>
                     <h3><img src={logo}/></h3>
-                    <p style={{maxWidth:'250px'}}>{props.requisites && props.requisites.address}</p>
+                    <p className="requisites">{props.requisites && props.requisites.address}</p>
                 </div>
                 <div className="phoneMail">
                     <h5 >
@@ -37,7 +37,7 @@ const Footer = props => {
                     <h5 >
                       <a href={`tel:${props.requisites && props.requisites.phone}`}>{props.requisites && props.requisites.phone}</a>
                     </h5>
-                    <p style={{margin: 'auto 0 0'}}><a href={`mailto:${props.requisites && props.requisites.email}`}>{props.requisites && props.requisites.email}</a></p>
+                    <p style={{margin: 'auto 0 0'}}><a style={{fontSize:'12pt'}} href={`mailto:${props.requisites && props.requisites.email}`}>{props.requisites && props.requisites.email}</a></p>
                 </div>
            </div>
            <div className="wrap2">
