@@ -137,6 +137,12 @@ export const removeTimer = () => (
   }
 )
 
+export const addSpecialOffer = group => (
+  {
+    type: 'SPECIAL_OFFER',
+    payload: group
+  }
+)
 
 
  

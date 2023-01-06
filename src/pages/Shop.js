@@ -6,6 +6,7 @@ import Pagination from "../components/Shop/Pagination/Pagination";
 import ShopingCard from "../components/Shop/ShopingCard/ShopingCard";
 import ShoppingCardPopup from "../components/Shop/ShoppingCardPopup/ShoppingCardPopup";
 import * as shopactions from '../actions/shop'
+import * as headeractions from '../actions/header'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Preloader from "../components/Preloader/Preloader";
@@ -13,7 +14,7 @@ import { useTranslation } from "react-i18next";
 import InfiniteScroll from 'react-infinite-scroll-component';
 
 
-const Shop = props => {
+const Shop = props => { 
 
   const { t } = useTranslation()
 
@@ -22,10 +23,11 @@ const Shop = props => {
 
   useEffect(() => {
     const { getFlowers, getColors, getGroups } = props;
-    getFlowers({...props.filterParams, size: 20, page: 0 })
+    getFlowers( {...props.filterParams, ['groupId']: props.specialOffer}, null, true  ) 
     getColors()
     getGroups()
     props.getContent('home')
+    props.addSpecialOffer(null)
     return () => {
       props.changeReady(false)
     }
@@ -104,11 +106,13 @@ const mapStateToProps = state => ({
   filterParams: state.shop.filterParams,
   colors: state.shop.colors,
   groups: state.shop.groups,
-  content: state.shop.content
+  content: state.shop.content,
+  specialOffer: state.header.specialOffer
 });
 
 const mapDispatchToProps = dispatch => ({
   ...bindActionCreators(shopactions, dispatch),
+  ...bindActionCreators(headeractions, dispatch),
 });
 
 export default connect(

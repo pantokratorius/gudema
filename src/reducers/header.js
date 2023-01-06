@@ -6,7 +6,8 @@ const initialState = {
     langsOpenMobile: false,
     timer: null,
     headerReady: false,
-    requisites: null
+    requisites: null,
+    specialOffer: null
   };
   
   export default function header (state = initialState, action)  { 
@@ -21,6 +22,11 @@ const initialState = {
         return {
             ...state,
             timer: null,
+        };
+      case "SPECIAL_OFFER":
+        return {
+            ...state,
+            specialOffer: action.payload,
         };
       case "SAVE_TIMER":
         return {
