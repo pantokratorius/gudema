@@ -21,7 +21,7 @@ const Shop = props => {
   document.title = "Gudema e-shop";
 
 
-  useEffect(() => {
+  useEffect(() => { 
     const { getFlowers, getColors, getGroups } = props;
     getFlowers( {...props.filterParams, ['groupId']: props.specialOffer}, null, true  ) 
     getColors()

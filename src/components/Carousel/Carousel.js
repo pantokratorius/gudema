@@ -12,10 +12,12 @@ const CarouselComponent = props => {
 const history = useHistory()
    
 const openSpecialGroup = group => { 
+  props.addSpecialOffer(group)
   if(props.isAuth){
-    props.addSpecialOffer(group)
     props.getFlowers( {...props.filterParams, ['groupId']: group}, null, true  ) 
     history.push('/shop')
+  }else{
+    props.authFormToggle()
   }
 }
     

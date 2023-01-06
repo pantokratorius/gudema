@@ -90,6 +90,7 @@ export const getCart = (history = null) => (
       const response = await axios.get(url)
       const data = await response.data.items
       if (data && !data.length) history.push('/shop')
+      await dispatch(getFlowers( {['groupId']: 1}, null, true  ) )
       await dispatch(setCart(data))
       await dispatch(getCartAmount())
       await dispatch(setDateData(response.data.plannedDeliveryDate))

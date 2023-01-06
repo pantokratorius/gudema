@@ -75,7 +75,7 @@ const mapStateToProps = state => ({
    password: state.auth.password,
    isAuth: !!state.auth.authUsername,
    alert: state.auth.alert,
-   requisites: state.header.requisites,
+   requisites: state.header.requisites
 });
   
   const mapDispatchToProps = dispatch => ({
