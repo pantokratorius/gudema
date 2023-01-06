@@ -21,7 +21,12 @@ import { useTranslation } from "react-i18next";
    const loginHandler = async (username, password, e) => {
     e.preventDefault()
     await props.auth(username, password, history)
-    await props.getCart(history)
+    const data =  await props.getCart()
+    if (data && data.length){
+      props.addSpecialOffer(props.specialOffer)
+      history.push('/shop')
+    } 
+      
   }
 
 
@@ -75,7 +80,8 @@ const mapStateToProps = state => ({
    password: state.auth.password,
    isAuth: !!state.auth.authUsername,
    alert: state.auth.alert,
-   requisites: state.header.requisites
+   requisites: state.header.requisites,
+   specialOffer: state.header.specialOffer
 });
   
   const mapDispatchToProps = dispatch => ({
