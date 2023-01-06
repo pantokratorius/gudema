@@ -14,6 +14,7 @@ const history = useHistory()
 const openSpecialGroup = group => { 
   if(props.isAuth){
     props.addSpecialOffer(group)
+    props.getFlowers( {...props.filterParams, ['groupId']: group}, null, true  ) 
     history.push('/shop')
   }
 }

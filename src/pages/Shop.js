@@ -30,6 +30,7 @@ const Shop = props => {
     props.addSpecialOffer(null)
     return () => {
       props.changeReady(false)
+      props.addSpecialOffer(null)
     }
   }, [])
 
