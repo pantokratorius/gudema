@@ -14,14 +14,16 @@ import { useTranslation } from "react-i18next";
 import InfiniteScroll from 'react-infinite-scroll-component';
 
 
-const Shop = props => { 
+const Shop = props => {  
 
   const { t } = useTranslation()
+
 
   document.title = "Gudema e-shop";
 
 
-  useEffect(() => { 
+  useEffect(() => {  
+    
     const { getFlowers, getColors, getGroups } = props;
     getFlowers( {...props.filterParams, ['groupId']: props.specialOffer}, null, true  ) 
     getColors()

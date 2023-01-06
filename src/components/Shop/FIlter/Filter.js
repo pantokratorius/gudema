@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 
 
 
-const Filter = ({colors, groups, getFlowers, filterParams}) => { 
+const Filter = ({colors, groups, getFlowers, filterParams}) => {
       
     const { t } = useTranslation();
 
@@ -22,7 +22,7 @@ const Filter = ({colors, groups, getFlowers, filterParams}) => {
         <div className="filter">
             <Form.Group className="select-group">
                 <img src={color} alt="" />
-                <Form.Select  onChange={handleSearch.bind(this, 'color')} style={{textTransform:'uppercase'}}> 
+                <Form.Select  onChange={handleSearch.bind(this, 'color')} style={{textTransform:'uppercase'}} value={filterParams.color}> 
                     <option value="">{t('filters.color')}</option>
                     {colors.length && colors.map((item, i)=>(
                         <option key={i} value={item}>{item}</option>
@@ -31,7 +31,7 @@ const Filter = ({colors, groups, getFlowers, filterParams}) => {
             </Form.Group>
             <Form.Group className="select-group">
             <img src={geles} alt="" />
-                <Form.Select onChange={handleSearch.bind(this, 'groupId')} style={{textTransform:'uppercase'}}>
+                <Form.Select onChange={handleSearch.bind(this, 'groupId')} style={{textTransform:'uppercase'}} value={filterParams.groupId}>
                     <option value="">{t('filters.flowers')}</option>
                     {groups.length && groups.map((item, i)=>(
                         <option key={i} value={item.id}>{item.name}</option>
