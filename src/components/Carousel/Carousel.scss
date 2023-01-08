@@ -1,5 +1,12 @@
 @import '../../variables.scss';
 
+.carousel {
+    @media (max-width: 700px){
+        width: 110%;
+        margin-left: -5%;
+    }
+}
+
 .carousel-indicators {
     bottom: -85px;
 
@@ -52,6 +59,7 @@
 
         @media (max-width: 700px){
             font-size: 50pt;
+            line-height: 72px;
         }
     }
 
@@ -59,6 +67,11 @@
         font-size: 30pt;
         margin-top: 25px;
         text-align: center;
+
+        @media (max-width: 700px){
+            line-height: 45px;
+        }
+
     }
 
     a{

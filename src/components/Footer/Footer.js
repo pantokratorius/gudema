@@ -42,7 +42,7 @@ const Footer = props => {
            </div>
            <div className="wrap2">
                 <div>
-                    {<h5><Link to='./shop'>{t('pages.shop')}</Link></h5>}
+                    {props.isAuth && <h5><Link to='./shop'>{t('pages.shop')}</Link></h5>}
                 </div>
                 <div>
                   <h5><Link to='./about'>{t('pages.aboutUs')}</Link></h5>
@@ -57,7 +57,8 @@ const Footer = props => {
 
   
 const mapStateToProps = state => ({
-  requisites: state.header.requisites
+  requisites: state.header.requisites,
+  isAuth: !!state.auth.authUsername
 });
   
   const mapDispatchToProps = dispatch => ({

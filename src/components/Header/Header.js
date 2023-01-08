@@ -98,6 +98,7 @@ const Header = props => {
         <div className="header">
             <div className="logo">
                 <Link to="/home"><img src={logo} alt="logo" /></Link>
+                <a className="floraplazaMobile" href="https://shop.floraplaza.nl/floraplaza/en/EUR/login?store=34356" target="_blank">Floraplaza</a>
                 {props.isAuth ?
                 <ul>
                   <li style={{position: 'relative'}}><a className={`parent ${orderMenuActive() && 'active'}`} href="#" onClick={props.toggleOrderMenu.bind(this,!props.orderMenuOpen)} ref={ref}>{t('pages.orders')}</a>
