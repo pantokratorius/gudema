@@ -94,7 +94,6 @@ export const getCart = (history = null) => (
       await dispatch(setCart(data))
       await dispatch(getCartAmount())
       await dispatch(setDateData(response.data.plannedDeliveryDate))
-      return data;
     } catch (err) {
       console.error(err)
     }

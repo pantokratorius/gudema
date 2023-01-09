@@ -22,10 +22,8 @@ import { useTranslation } from "react-i18next";
     e.preventDefault()
     await props.auth(username, password, history)
     const data =  await props.getCart()
-    if (data && data.length){
       props.addSpecialOffer(props.specialOffer)
       history.push('/shop')
-    } 
       
   }
 
