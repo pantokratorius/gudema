@@ -1,9 +1,13 @@
 .box {
-    width: 80%;
+    width: 70%;
     margin: 150px auto 0;
     border-bottom: 6px solid #ebeefc;
     min-width: 300px;
     
+    @media (max-width: 1300px){
+        width: 80%;
+    }
+
     @media (max-width: 700px){
         width: 100%;
     }
@@ -18,22 +22,22 @@
             font-size: 36pt;
             position: absolute;
             left: 50%;
-            top: -37px;
+            top: -15px;
             transform: translateX(-50%);
 
             @media (max-width: 1150px){
                 font-size: 20pt;
-                top: 16px;
+                top: 20px;
             }
 
         }
 
         img:nth-child(2) {
-            width: 70px;
+            width: 50px;
             margin-bottom: -70px;
 
             @media (max-width: 1150px){
-                width: 40px;
+                width: 30px;
             }
 
         }
@@ -42,21 +46,27 @@
             position: absolute;
             bottom: -30%;
             left: -10%;
-            width: 80px;
+            width: 70px;
 
             @media (max-width: 1150px){
-                width: 40px;
+                width: 30px;
+                left: -10%;
+                bottom: -20%;
             }
 
         }
         
                 &:first-child img:last-child {
                     left: 13%;
-                    width: 50px;
+                    width: 40px;
 
                     @media (max-width: 1150px){
-                        width: 20px;
+                        width: 15px;
                     }
+                }
+
+                &:last-child img:last-child {
+                    bottom: -20%;
                 }
 
     }

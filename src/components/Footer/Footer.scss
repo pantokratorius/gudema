@@ -1,9 +1,12 @@
 .footer {
-    margin:  200px 0 50px;
+    margin: 100px 0 0px -50px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     position: relative;
+    background: #f7f7f7;
+    padding: 50px 80px 100px;
+    width: calc(100% + 100px);
 
     .phoneMail {
         width: 175px !important;
@@ -34,8 +37,10 @@
     }
 
     @media (max-width: 700px){
-        margin: 100px 0 50px;
+        // margin: 100px 0 50px;
         flex-direction: column;
+        margin: 100px 0 0 -5%;
+        width: 110%;
     }
 
     hr {
