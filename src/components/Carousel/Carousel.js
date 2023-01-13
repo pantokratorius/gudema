@@ -6,8 +6,11 @@ import * as shopActions from '../../actions/shop'
 import * as headerActions from '../../actions/header'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux';
+import { useTranslation } from "react-i18next";
 
 const CarouselComponent = props => {  
+
+  const { t } = useTranslation();
 
 const history = useHistory()
    
@@ -38,7 +41,7 @@ const openSpecialGroup = group => {
             <div  className="heroText">
                       <h2>{image.headline}</h2>
                       {image.group &&
-                      <p>browse all offers <a href="#" onClick={openSpecialGroup.bind(this, image.group)}>here</a></p>
+                      <p>{t("sliderText")} <a href="#" onClick={openSpecialGroup.bind(this, image.group)}>{t("sliderTextHere")}</a></p>
                       }
                     </div>
                     : null
