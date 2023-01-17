@@ -82,6 +82,12 @@
       "new": "New to the webshop",
       "contact": "Contact",
       "wrong": "Väärä käyttäjätunnus tai salasana"
+    },
+    "howWeDo" : {
+      "order": "Tilaus",
+      "transit": "Transit",
+      "delivery": "Toimitus",
+      "simple": "Yksinkertainen kuin yksi kaksi kolme ..."
     }
   }
 

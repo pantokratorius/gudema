@@ -82,5 +82,11 @@
       "new": "Pirmą kartą pas mus",
       "contact": "Susisiekite",
       "wrong": "Neteisingi duomenys"
+    },
+    "howWeDo" : {
+      "order": "Užsakymas",
+      "transit": "Gabenimas",
+      "delivery": "Pristatymas",
+      "simple": "Paprasta kaip vienas du trys ..."
     }
   }

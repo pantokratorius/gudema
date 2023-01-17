@@ -83,5 +83,11 @@
       "contact": "Contact",
       "wrong": "Wrong username or password"
 
+    },
+    "howWeDo" : {
+      "order": "Order",
+      "transit": "Transit",
+      "delivery": "Delivery",
+      "simple": "Simple as one two three ..."
     }
   }

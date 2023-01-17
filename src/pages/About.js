@@ -26,7 +26,7 @@ const About = props => {
                   props.content && props.content.map((item, i)=>(
                       item.type= "blockWithImage" ?
                        item.data.imagePosition && item.data.imagePosition == 'right' ?
-                      <div className="block2">
+                      <div className="block2" key={i}>
                         <div className="text">
                             <h2>{props.content && props.content[i] ? props.content[i].data.headline : ''}</h2>
                             <p>{props.content && props.content[i] ? props.content[i].data.text : ''}</p>
@@ -34,7 +34,7 @@ const About = props => {
                         <img src={props.content && props.content[i] ? props.content[i].data.imageLink : ''} alt="" />
                     </div>
                     :
-                    <div className="block1">
+                    <div className="block1" key={i}>
                         <img src={props.content && props.content[i] ? props.content[i].data.imageLink : ''} alt="" />
                         <div className="text">
                             <h2>{props.content && props.content[i] ? props.content[i].data.headline : ''}</h2>

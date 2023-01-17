@@ -40,9 +40,9 @@
     @media (max-width: 700px){
         // margin: 100px 0 50px;
         flex-direction: column;
-        margin: 100px 0 0 -5%;
+        margin: 0px 0 0 -5%;
         width: 110%;
-        padding: 50px 0 100px;
+        padding: 70px 0 70px;
     }
 
     hr {
@@ -50,6 +50,15 @@
         top: -80px;
         // left: -50px;
         width: 100%;
+    }
+
+    .wrap {
+        img {
+
+            @media (max-width: 700px){
+                width: 170px;
+            }
+        }
     }
 
 

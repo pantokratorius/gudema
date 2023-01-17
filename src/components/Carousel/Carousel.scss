@@ -51,24 +51,31 @@
     }
 
     h2{
-        font-size: 60pt;
-        line-height: 85px;
+        font-size: 72px;
+        line-height: 72px;
         font-weight: bold;
         text-align: center;
 
 
         @media (max-width: 700px){
-            font-size: 50pt;
-            line-height: 72px;
+            font-size: 57px;
+            line-height: 60px;
         }
+
+        @media (max-width: 450px){
+            font-size: 50px;
+            line-height: 60px;
+        }
+
     }
 
     p {
-        font-size: 30pt;
+        font-size: 36px;
         margin-top: 25px;
         text-align: center;
 
         @media (max-width: 700px){
+            font-size: 33px;
             line-height: 45px;
         }
 
