@@ -34,7 +34,7 @@ import { useTranslation } from "react-i18next";
                 <Form onSubmit={loginHandler.bind(null,props.username, props.password)}><span className="close-popup" onClick={props.hideAuthHandler}>&times;</span>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label className="gudema">G U D E M A</Form.Label>
-                        <Form.Label style={{fontSize: '13px'}} className="mb-5">{t('loginWind.login')}</Form.Label>
+                        <Form.Label style={{fontSize: '14px'}} className="mb-5">{t('loginWind.login')}</Form.Label>
                         <Form.Control type="text" name="urername" placeholder={t('loginWind.name')} onChange={props.onChangeName}/>
                     </Form.Group>
 
@@ -48,9 +48,9 @@ import { useTranslation } from "react-i18next";
                     {t('logIn')}
                     </Button>   
                     <Form.Group className="mt-3" controlId="contact">
-                        <Form.Label style={{color: '#212529',textDecoration: 'none', fontSize:"12px"}}>{t('loginWind.lost')}?</Form.Label>
-                        <Form.Label className="mb-0" style={{color: '#212529',textDecoration: 'none', fontSize:"12px"}}>{t('loginWind.new')}?</Form.Label>
-                        <Form.Label style={{fontSize:"13px"}}>{t('loginWind.contact')} - <a href="mailto:edgaras@gudema.ee" style={{color: '#212529', textDecoration: 'underline'}}>{props.requisites && props.requisites.email}</a></Form.Label>
+                        <Form.Label style={{color: '#212529',textDecoration: 'none', fontSize:"14px"}}>{t('loginWind.lost')}?</Form.Label>
+                        <Form.Label className="mb-0" style={{color: '#212529',textDecoration: 'none', fontSize:"14px"}}>{t('loginWind.new')}?</Form.Label>
+                        <Form.Label style={{fontSize:"15px", marginTop:'5px'}}>{t('loginWind.contact')} - <a href="mailto:edgaras@gudema.ee" style={{color: '#212529', textDecoration: 'underline'}}>{props.requisites && props.requisites.email}</a></Form.Label>
                     </Form.Group>
                     </Form>
                     <Card style={{ width: '18rem' }}><span className="close-popup" onClick={props.hideAuthHandler}>&times;</span>
