@@ -40,14 +40,7 @@ const Footer = props => {
                     <p className="email" style={{margin: 'auto 0 0'}}><a style={{fontSize:'12pt'}} href={`mailto:${props.requisites && props.requisites.email}`}>{props.requisites && props.requisites.email}</a></p>
                 </div>
            </div>
-           <div className="wrap2">
-                <div>
-                    {props.isAuth && <h5><Link to='./shop'>{t('pages.shop')}</Link></h5>}
-                </div>
-                <div>
-                  <h5><Link to='./about'>{t('pages.aboutUs')}</Link></h5>
-                </div>
-           </div>
+      
         </div>
     )
 }
