@@ -37,7 +37,7 @@ const Footer = props => {
                     <h5 >
                       <a href={`tel:${props.requisites && props.requisites.phoneSecond}`}>{props.requisites && props.requisites.phoneSecond}</a>
                     </h5>
-                    <p className="email" style={{margin: 'auto 0 0'}}><a style={{fontSize:'12pt'}} href={`mailto:${props.requisites && props.requisites.email}`}>{props.requisites && props.requisites.email}</a></p>
+                    <p className="email" style={{margin: 'auto 0 0'}}><a style={{fontSize:'12pt', lineHeight: '32px'}} href={`mailto:${props.requisites && props.requisites.email}`}>{props.requisites && props.requisites.email}</a></p>
                 </div>
            </div>
       
