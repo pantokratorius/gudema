@@ -37,7 +37,7 @@ import axios from "axios";
                         {props.isAuth &&
                             <li><NavLink to="/shop">{t('pages.shop')}</NavLink></li>
                         }
-                            <li><NavLink to="/about">{t('pages.aboutUs')}</NavLink></li>
+                            {/* <li><NavLink to="/about">{t('pages.aboutUs')}</NavLink></li> */}
                             {/* <li><NavLink to="/contacts">{t('pages.contacts')}</NavLink></li> */}
                             {props.isAuth &&
                               <>
