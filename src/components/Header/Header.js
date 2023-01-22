@@ -130,7 +130,7 @@ const Header = props => {
                     {langs.map((lang, i)=> {
                       if(lang != currentLanguage)
                       return(
-                      <li key={i}><a href="#" onClick={handleLangClick.bind(this, lang)}>{lang}</a></li>
+                      <li key={i}><a href="#" onClick={handleLangClick.bind(this, lang)}>{lang || 'en'}</a></li>
                       )
                     })}
                   </ul>
