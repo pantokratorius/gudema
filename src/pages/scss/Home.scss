@@ -54,10 +54,20 @@
             margin-bottom: 30px;
             font-size: 24pt;
             font-weight: bold;
+
+
+            @media (max-width: 450px){
+                margin-bottom: 20px;
+            }
         }
 
         p{
             font-size: 14pt;
+
+            @media (max-width: 450px){
+                font-size: 12pt;
+            }
+
         }
     }
 
@@ -94,11 +104,21 @@
         margin-bottom: 30px;
         font-size: 24pt;
         font-weight: bold;
+
+
+        @media (max-width: 450px){
+            margin-bottom: 20px;
+        }
     }
 
 
         p{
             font-size: 14pt;
+
+            @media (max-width: 450px){
+                font-size: 12pt;
+            }
+
         }
     }
        

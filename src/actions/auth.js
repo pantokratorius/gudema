@@ -18,10 +18,12 @@ export const auth = (email, password) => (
         await dispatch(hideAuth('close-popup'))
         await  dispatch(handleAlert(false))
         await dispatch(autoLogin())
+        return true
          
          } catch (err) {
             console.error(err)
             dispatch(handleAlert(true))
+            return false
          }
 
    }

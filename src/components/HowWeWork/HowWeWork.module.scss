@@ -16,12 +16,24 @@
         text-align: center;
 
 
+      
+
+
         span {
             font-size: 39px;
             position: absolute;
             left: 50%;
             top: -15px;
             transform: translateX(-50%);
+
+            @media (max-width: 1550px){
+                font-size: 34px;
+            }
+
+
+            @media (max-width: 1350px){
+                font-size: 29px;
+            }
 
             @media (max-width: 1150px){
                 font-size: 27px;
@@ -30,6 +42,10 @@
 
             @media (max-width: 768px){
                 font-size: 21px;
+                top: 15px;
+            }
+            @media (max-width: 450px){
+                font-size: 19px;
                 top: 15px;
             }
 
@@ -52,6 +68,10 @@
             left: -10%;
             width: 70px;
 
+            @media (max-width: 1350px){
+                width: 50px;
+            }
+
             @media (max-width: 1150px){
                 width: 30px;
                 left: -10%;
@@ -63,6 +83,11 @@
                 &:first-child img:last-child {
                     left: 13%;
                     width: 40px;
+
+
+                    @media (max-width: 1350px){
+                        width: 28px;
+                    }
 
                     @media (max-width: 1150px){
                         width: 15px;

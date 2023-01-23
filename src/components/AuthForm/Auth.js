@@ -20,10 +20,11 @@ import { useTranslation } from "react-i18next";
 
    const loginHandler = async (username, password, e) => {
     e.preventDefault()
-    await props.auth(username, password, history)
+    const auth_result = await props.auth(username, password, history)
     const data =  await props.getCart()
       props.addSpecialOffer(props.specialOffer)
-      history.push('/shop')
+      if(auth_result)
+        history.push('/shop')
       
   }
 

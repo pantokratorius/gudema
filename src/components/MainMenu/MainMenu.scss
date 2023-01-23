@@ -11,7 +11,7 @@
         text-transform: uppercase;
         
         a {
-            font-size: 19px;
+            font-size: 21px;
         }
 
         @media (max-width: 900px) {
@@ -46,7 +46,7 @@
             top: 15px;
             right: 50px;
             font-weight: bold;
-            font-size: 21px;
+            font-size: 34px;
             cursor: pointer;
 
 
@@ -86,7 +86,7 @@
         .arrow {
             position: absolute;
             top: 1px;
-            right: 21px;
+            right: 16px;
             font-size: 20px;
             transform: rotate(-90deg);
             font-weight: bold;
@@ -94,7 +94,7 @@
         
         .rotated {
             transform: rotate(90deg);
-            right: 22px;
+            right: 14px;
         }
 
 }    
