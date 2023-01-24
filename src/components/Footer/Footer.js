@@ -28,7 +28,7 @@ const Footer = props => {
             <div className="wrap">
                 <div>
                     <h3 className="logo"><img src={logo}/></h3>
-                    <p className="requisites">{props.requisites && props.requisites.address}</p>
+                    <p className="requisites">{props.requisites && props.requisites.secondaryAddress}</p>
                 </div>
                 <div className="phoneMail">
                     <h5 >
