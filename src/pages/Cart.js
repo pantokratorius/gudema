@@ -65,7 +65,7 @@ const Cart = props => {
           )}
           <TotalSum cart={props.cart} />
           <ConfirmationButton submitOrderHandler={submitOrderHandler.bind(this, {"message": t('message.orderConfNotif.message')} )} ordered={props.ordered} />
-          <Footer hr={true}  />
+          <Footer   />
          
         </>
     )

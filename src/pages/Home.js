@@ -28,7 +28,7 @@ const Home = props => {
             <CarouselComponent images={props.content ? props.content : null} />
             }
             <HowWeWork />
-            <div>
+            <div style={{minHeight: 'calc(100vh - 465px)'}}>
               {!props.isReady ?
                   <Preloader />
                   :

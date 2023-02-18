@@ -42,7 +42,7 @@ const Hystory = props => {
 
     return(
         <>    
-            <div>
+            <div style={{minHeight: 'calc(100vh - 465px)'}}>
               {props.order ?
                   <Order />
                   :
